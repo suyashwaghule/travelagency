@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangitam Travels | WebGL 3D Interactive Travel Experience Since 1983</title>
+  <meta name="description" content="Founded in 1983 by Mr. Vinod Patil. Sangitam Travels is Maharashtra's premier private bus & parcel operator with 100+ luxury AC sleeper coaches, live GPS tracking, and parcel services.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- FULL-SCREEN THREE.JS WEBGL 3D CANVAS STAGE -->
+  <div id="webgl-canvas-container"></div>
+
+  <!-- FLOATING JOURNEY PROGRESS BAR -->
+  <div class="journey-progress-bar-container">
+    <div class="journey-progress-fill">
+      <div class="journey-progress-bus-icon">
+        <i class="fas fa-bus"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING GLASSMORPHISM NAVIGATION BAR -->
+  <div class="modern-floating-nav-wrapper">
+    <nav class="modern-nav-capsule">
+      
+      <a href="index.html" class="modern-brand-link">
+        <div class="modern-brand-badge">
+          <img src="images/anniversary_seal.png" alt="Sangitam Travels Crest" style="width: 32px; height: 32px; object-fit: contain;">
+        </div>
+        <div>
+          <div class="modern-brand-name">SANGITAM</div>
+          <div class="modern-brand-tag">EST. 1983 • TRAVELS</div>
+        </div>
+      </a>
+
+      <ul class="modern-nav-menu">
+        <li class="modern-nav-item"><a href="index.html" class="active">Home</a></li>
+        <li class="modern-nav-item"><a href="about.html">About Us</a></li>
+        <li class="modern-nav-item"><a href="services.html">Services</a></li>
+        <li class="modern-nav-item"><a href="fleet.html">Fleet & Seats</a></li>
+        <li class="modern-nav-item"><a href="routes.html">Routes</a></li>
+        <li class="modern-nav-item"><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="modern-nav-action-group">
+        <div class="modern-phone-pill">
+          <i class="fas fa-phone-alt"></i> +91 (257) 222-1983
+        </div>
+        <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Bus Ticket">
+          <i class="fas fa-ticket-alt"></i> Book Ticket
+        </button>
+      </div>
+
+    </nav>
+  </div>
+
+  <!-- REDESIGNED CINEMATIC SPLIT HERO SECTION -->
+  <section id="hero" class="hero-modern-split-section">
+    <div class="hero-modern-grid">
+      
+      <!-- Left Column: Value Proposition -->
+      <div>
+        <div class="badge-modern-glow">
+          <i class="fas fa-mountain" style="color: var(--clr-wax-red);"></i> 3D MOUNTAIN ENVIRONMENT • EST. 1983
+        </div>
+
+        <h1 class="hero-modern-headline">
+          Redefining <span class="highlight-crimson">Premium Bus Travel</span> Across Maharashtra
+        </h1>
+
+        <p class="hero-modern-lead">
+          Experience unmatched comfort in our modern fleet of 100+ AC Sleeper coaches. Real-time GPS tracking, express cargo parcel delivery, and 24/7 dedicated customer support.
+        </p>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Bus Ticket">
+            <i class="fas fa-ticket-alt"></i> Book Tickets Now
+          </button>
+          <a href="fleet.html" class="btn-secondary-gold">
+            <i class="fas fa-cube"></i> View 3D Fleet Lounge
+          </a>
+        </div>
+
+        <div class="hero-trust-metrics">
+          <div class="hero-metric-pill">
+            <i class="fas fa-bus-alt"></i> 100+ Luxury AC Sleepers
+          </div>
+          <div class="hero-metric-pill">
+            <i class="fas fa-satellite-dish"></i> Live GPS Tracking
+          </div>
+          <div class="hero-metric-pill">
+            <i class="fas fa-shipping-fast"></i> Express Cargo Logistics
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Multi-Tool Desk -->
+      <div class="hero-glass-desk-card">
+        <div style="margin-bottom: 20px;">
+          <h3 class="desk-card-title"><i class="fas fa-compass" style="color: var(--clr-wax-red);"></i> Travel & Cargo Lounge</h3>
+          <p style="font-size: 0.92rem; color: var(--clr-ink-sepia);">Search seats, track live GPS location, or trace parcel status.</p>
+        </div>
+
+        <!-- MULTI-TOOL DESK WIDGET -->
+        <div class="sangitam-multitool-card" style="padding: 0; background: transparent !important; border: none !important; box-shadow: none !important;">
+          <div class="multitool-tabs-header">
+            <button class="multitool-tab-btn active" data-tab="tabBooking">
+              <i class="fas fa-ticket-alt"></i> Book Tickets
+            </button>
+            <button class="multitool-tab-btn" data-tab="tabTrackBus">
+              <i class="fas fa-map-marker-alt"></i> Live GPS
+            </button>
+            <button class="multitool-tab-btn" data-tab="tabTrackParcel">
+              <i class="fas fa-box-open"></i> Track Cargo
+            </button>
+          </div>
+
+          <!-- TAB 1: BOOKING -->
+          <div id="tabBooking" class="multitool-panel">
+            <form id="sangitamBookingForm" class="multitool-form-grid">
+              <div class="form-sangitam-group">
+                <label for="bookFrom"><i class="fas fa-bus-departure"></i> Origin City</label>
+                <select id="bookFrom" class="form-sangitam-control" required>
+                  <option value="">Select From City</option>
+                  <option value="Jalgaon" selected>Jalgaon</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Aurangabad (Sambhajinagar)">Aurangabad (Sambhajinagar)</option>
+                  <option value="Nashik">Nashik</option>
+                  <option value="Bhusawal">Bhusawal</option>
+                  <option value="Dhule">Dhule</option>
+                  <option value="Nagpur">Nagpur</option>
+                  <option value="Mumbai">Mumbai Region</option>
+                </select>
+              </div>
+
+              <div class="form-sangitam-group">
+                <label for="bookTo"><i class="fas fa-bus-arrival"></i> Destination City</label>
+                <select id="bookTo" class="form-sangitam-control" required>
+                  <option value="">Select Destination</option>
+                  <option value="Pune" selected>Pune</option>
+                  <option value="Jalgaon">Jalgaon</option>
+                  <option value="Nashik">Nashik</option>
+                  <option value="Aurangabad (Sambhajinagar)">Aurangabad (Sambhajinagar)</option>
+                  <option value="Solapur">Solapur</option>
+                  <option value="Kolhapur">Kolhapur</option>
+                  <option value="Latur">Latur</option>
+                  <option value="Amravati">Amravati</option>
+                </select>
+              </div>
+
+              <div class="form-sangitam-group">
+                <label for="bookDate"><i class="fas fa-calendar-alt"></i> Journey Date</label>
+                <input type="date" id="bookDate" class="form-sangitam-control" required>
+              </div>
+
+              <div class="form-sangitam-group">
+                <button type="submit" class="btn-primary-sangitam" style="width: 100%; height: 46px;">
+                  <i class="fas fa-search"></i> Search Buses
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- TAB 2: GPS -->
+          <div id="tabTrackBus" class="multitool-panel" style="display: none;">
+            <form id="busTrackForm" style="display: flex; flex-direction: column; gap: 14px;">
+              <div>
+                <label style="font-family: var(--font-sub-serif); font-size: 0.78rem; font-weight: bold; color: var(--clr-wax-red); text-transform: uppercase;">
+                  <i class="fas fa-route"></i> Ticket PNR Number
+                </label>
+                <input type="text" id="trackPnrInput" class="form-sangitam-control" style="width: 100%; margin-top: 4px;" placeholder="e.g., SNG-1983-9842" required>
+              </div>
+              <button type="submit" class="btn-primary-sangitam" style="height: 46px; width: 100%;">
+                <i class="fas fa-crosshairs"></i> Track Bus Live GPS
+              </button>
+            </form>
+          </div>
+
+          <!-- TAB 3: CARGO -->
+          <div id="tabTrackParcel" class="multitool-panel" style="display: none;">
+            <form id="parcelTrackForm" style="display: flex; flex-direction: column; gap: 14px;">
+              <div>
+                <label style="font-family: var(--font-sub-serif); font-size: 0.78rem; font-weight: bold; color: var(--clr-wax-red); text-transform: uppercase;">
+                  <i class="fas fa-box-open"></i> Parcel Waybill / LR Number
+                </label>
+                <input type="text" id="trackLrInput" class="form-sangitam-control" style="width: 100%; margin-top: 4px;" placeholder="e.g., SNG-LR-5582" required>
+              </div>
+              <button type="submit" class="btn-primary-sangitam" style="height: 46px; width: 100%;">
+                <i class="fas fa-search-location"></i> Track Parcel Shipment
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="sangitam-stats-banner">
+    <div class="sangitam-stats-grid">
+      <div class="stat-box-sangitam">
+        <div class="stat-number-sangitam">1983</div>
+        <div class="stat-label-sangitam">Established Year</div>
+      </div>
+      <div class="stat-box-sangitam">
+        <div class="stat-number-sangitam">100+</div>
+        <div class="stat-label-sangitam">Company-Owned Buses</div>
+      </div>
+      <div class="stat-box-sangitam">
+        <div class="stat-number-sangitam">40+</div>
+        <div class="stat-label-sangitam">Years of Legacy</div>
+      </div>
+      <div class="stat-box-sangitam">
+        <div class="stat-number-sangitam">500K+</div>
+        <div class="stat-label-sangitam">Passengers Annually</div>
+      </div>
+      <div class="stat-box-sangitam">
+        <div class="stat-number-sangitam">7M+</div>
+        <div class="stat-label-sangitam">Kilometers Covered Annually</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER I: THE 1983 HERITAGE TIMELINE -->
+  <section id="timeline1983" class="scrollytelling-chapter">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
+      <span class="editorial-tag">Chapter I — Four Decades of Legacy</span>
+      <h2 style="font-size: 3rem;">The Sangitam 1983 Story</h2>
+      <div class="gold-keyline"></div>
+      <p style="color: var(--clr-ink-sepia);">
+        From a single bus en route between Jalgaon and Pune to over 100+ company-owned luxury AC sleeper coaches across Maharashtra.
+      </p>
+    </div>
+
+    <div class="timeline-interactive-container">
+      <div class="timeline-spine-line"></div>
+
+      <!-- Node 1 -->
+      <div class="timeline-node-item">
+        <div class="timeline-dot-pin"></div>
+        <div class="timeline-card-box">
+          <div class="timeline-year-tag">1983 — The First Journey</div>
+          <h4 style="font-size: 1.3rem; margin-bottom: 8px;">Founded by Mr. Vinod Patil</h4>
+          <p style="color: var(--clr-ink-sepia); font-size: 1.02rem;">
+            Sangitam Travels was established with a single bus operating between Jalgaon and Pune. Built on personal commitment, punctuality, and passenger safety.
+          </p>
+        </div>
+      </div>
+
+      <!-- Node 2 -->
+      <div class="timeline-node-item node-right">
+        <div class="timeline-dot-pin"></div>
+        <div class="timeline-card-box">
+          <div class="timeline-year-tag">2005 — Fleet Expansion</div>
+          <h4 style="font-size: 1.3rem; margin-bottom: 8px;">Connecting Major Maharashtra Hubs</h4>
+          <p style="color: var(--clr-ink-sepia); font-size: 1.02rem;">
+            Expanded inter-city routes to Nashik, Sambhajinagar (Aurangabad), Bhusawal, Dhule, and Mumbai, establishing regional booking hubs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Node 3 -->
+      <div class="timeline-node-item">
+        <div class="timeline-dot-pin"></div>
+        <div class="timeline-card-box">
+          <div class="timeline-year-tag">2018 — Multi-Axle Luxury Era</div>
+          <h4 style="font-size: 1.3rem; margin-bottom: 8px;">Induction of Mercedes-Benz & Volvo Sleepers</h4>
+          <p style="color: var(--clr-ink-sepia); font-size: 1.02rem;">
+            Modernized the fleet under Director Dhanvijay Patil, introducing air-suspension sleeper berths and live GPS tracking for passenger safety.
+          </p>
+        </div>
+      </div>
+
+      <!-- Node 4 -->
+      <div class="timeline-node-item node-right">
+        <div class="timeline-dot-pin"></div>
+        <div class="timeline-card-box">
+          <div class="timeline-year-tag">2026 — Digital Logistics Leader</div>
+          <h4 style="font-size: 1.3rem; margin-bottom: 8px;">100+ Buses & Express Cargo Logistics</h4>
+          <p style="color: var(--clr-ink-sepia); font-size: 1.02rem;">
+            Spearheaded by Director Dharmasen Patil, offering seamless online seat booking, mobile app tracking, and express cargo parcel logistics across Maharashtra.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHAPTER II: INSIDE THE LUXURY SUITE -->
+  <section id="cabinExplorer" class="scrollytelling-chapter">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
+      <span class="editorial-tag">Chapter II — Interactive 3D Model</span>
+      <h2 style="font-size: 3rem;">Celcius 3D Luxury Coach Model</h2>
+      <div class="gold-keyline"></div>
+      <p style="color: var(--clr-ink-sepia);">
+        Drag, rotate, and zoom the real interactive 3D bus model below created by hanzelart.
+      </p>
+    </div>
+
+    <div class="cabin-explorer-wrapper" style="grid-template-columns: 1fr;">
+      <div class="cabin-visual-stage" style="height: 540px; background: #0F172A; border-radius: 12px; overflow: hidden; position: relative;">
+        
+        <!-- SKETCHFAB EMBEDDED REAL 3D VIEWER -->
+        <iframe title="Celcius 3D Luxury Sleeper Coach" 
+                frameborder="0" 
+                allowfullscreen 
+                mozallowfullscreen="true" 
+                webkitallowfullscreen="true" 
+                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                xr-spatial-tracking 
+                execution-while-out-of-viewport 
+                execution-while-not-rendered 
+                web-share 
+                src="https://sketchfab.com/models/baebf2d381f942aa964b4bfe54e94500/embed?autostart=1&camera=0&ui_theme=dark&ui_infos=0&ui_watermark=0" 
+                style="width: 100%; height: 100%; border: none;">
+        </iframe>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER III: TOPOLOGICAL ROUTE MAP -->
+  <section id="routeMap" class="scrollytelling-chapter">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
+      <span class="editorial-tag">Chapter III — Connecting Maharashtra</span>
+      <h2 style="font-size: 3rem;">Interactive Regional Route Network</h2>
+      <div class="gold-keyline"></div>
+      <p style="color: var(--clr-ink-sepia);">
+        Click on any key terminal node below to inspect route frequencies, headquarters hubs, and live connection details.
+      </p>
+    </div>
+
+    <div class="map-interactive-container">
+      <div class="svg-map-stage">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; height: 100%; min-height: 280px; padding: 20px;">
+          <button class="city-node-btn active" data-city="jalgaon"><i class="fas fa-map-pin"></i> Jalgaon (HQ)</button>
+          <button class="city-node-btn" data-city="pune"><i class="fas fa-map-pin"></i> Pune Hub</button>
+          <button class="city-node-btn" data-city="nashik"><i class="fas fa-map-pin"></i> Nashik</button>
+          <button class="city-node-btn" data-city="sambhajinagar"><i class="fas fa-map-pin"></i> Sambhajinagar</button>
+          <button class="city-node-btn" data-city="mumbai"><i class="fas fa-map-pin"></i> Mumbai Region</button>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <span class="editorial-tag" style="font-size: 0.9rem;">Route Terminal Inspection</span>
+        <h3 id="mapRouteTitle" style="font-size: 1.8rem; margin: 8px 0;">Jalgaon (Sangitam Head Office)</h3>
+        <p id="mapRouteMeta" style="color: var(--clr-wax-red); font-weight: bold; font-size: 0.95rem; margin-bottom: 14px;">
+          Origin Hub • 8 Daily Services to Pune & Mumbai
+        </p>
+        <p id="mapRouteDesc" style="color: var(--clr-ink-sepia); font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+          Sangitam Travels was born in Jalgaon in 1983. Operating daily premium AC sleeper coaches from Lewa Boarding Complex to Pune, Mumbai, Nashik, and Surat.
+        </p>
+        <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Route Service">
+          <i class="fas fa-ticket-alt"></i> Reserve Seat on Route
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER IV: LIVE INTERACTIVE SEAT MAP LOUNGE -->
+  <section id="seatLounge" class="scrollytelling-chapter">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
+      <span class="editorial-tag">Chapter IV — Live Booking Lounge</span>
+      <h2 style="font-size: 3rem;">Interactive Sleeper Seat Selector</h2>
+      <div class="gold-keyline"></div>
+      <p style="color: var(--clr-ink-sepia);">
+        Select your preferred upper or lower sleeper berth directly on the interactive cabin map below.
+      </p>
+    </div>
+
+    <div class="seatmap-modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid rgba(158, 27, 50, 0.15); padding-bottom: 16px;">
+        <div>
+          <h4 style="font-size: 1.4rem; color: var(--clr-ink-dark);">Mercedes-Benz AC Sleeper Coach (2+1 Layout)</h4>
+          <p style="color: var(--clr-ink-sepia); font-size: 0.95rem;">Jalgaon Head Office ➔ Pune Corporate Office</p>
+        </div>
+        <div style="display: flex; gap: 16px; font-size: 0.85rem; font-weight: bold;">
+          <span><span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border: 1px solid var(--clr-wax-red); border-radius: 2px;"></span> Available</span>
+          <span><span style="display: inline-block; width: 12px; height: 12px; background: var(--clr-wax-red); border-radius: 2px;"></span> Selected</span>
+          <span><span style="display: inline-block; width: 12px; height: 12px; background: rgba(110, 92, 82, 0.2); border-radius: 2px;"></span> Booked</span>
+        </div>
+      </div>
+
+      <div class="seat-deck-container">
+        <!-- Lower Deck -->
+        <div class="deck-box">
+          <div class="deck-title"><i class="fas fa-layer-group"></i> Lower Deck Berths</div>
+          <div class="berth-grid">
+            <div class="berth-cell" data-seat="L1">L1 (₹950)</div>
+            <div class="berth-cell booked" data-seat="L2">L2 (Booked)</div>
+            <div class="berth-cell" data-seat="L3">L3 (₹950)</div>
+            <div class="berth-cell" data-seat="L4">L4 (₹950)</div>
+            <div class="berth-cell booked" data-seat="L5">L5 (Booked)</div>
+            <div class="berth-cell" data-seat="L6">L6 (₹950)</div>
+          </div>
+        </div>
+
+        <!-- Upper Deck -->
+        <div class="deck-box">
+          <div class="deck-title"><i class="fas fa-layer-group"></i> Upper Deck Berths</div>
+          <div class="berth-grid">
+            <div class="berth-cell" data-seat="U1">U1 (₹950)</div>
+            <div class="berth-cell" data-seat="U2">U2 (₹950)</div>
+            <div class="berth-cell booked" data-seat="U3">U3 (Booked)</div>
+            <div class="berth-cell" data-seat="U4">U4 (₹950)</div>
+            <div class="berth-cell" data-seat="U5">U5 (₹950)</div>
+            <div class="berth-cell" data-seat="U6">U6 (₹950)</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div id="selectedSeatSummary" style="font-family: var(--font-sub-serif); font-size: 1.05rem; font-weight: 700; color: var(--clr-wax-red);">
+          Click on any available berth to select your seat.
+        </div>
+        <button id="btnBookSelectedSeat" class="btn-primary-sangitam" style="display: none;">
+          <i class="fas fa-check-circle"></i> Proceed to Book Selected Berth
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP SECTION -->
+  <section id="leadership" class="scrollytelling-chapter">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
+      <span class="editorial-tag">Visionaries Behind Sangitam</span>
+      <h2 style="font-size: 3rem;">Our Leadership</h2>
+      <div class="gold-keyline"></div>
+      <p style="color: var(--clr-ink-sepia);">
+        Guided by experienced leadership dedicated to safety, reliability, and continuous innovation.
+      </p>
+    </div>
+
+    <div class="leadership-grid">
+      <div class="leader-card">
+        <div class="leader-avatar-icon"><i class="fas fa-user-shield"></i></div>
+        <h3 class="leader-name">Mr. Vinod Patil</h3>
+        <span class="leader-role">Founder & Managing Director</span>
+        <p class="leader-bio">
+          Started Sangitam Travels in 1983 with a pioneering vision of providing dependable road transport, starting with the iconic Jalgaon–Pune route.
+        </p>
+      </div>
+
+      <div class="leader-card">
+        <div class="leader-avatar-icon"><i class="fas fa-chart-line"></i></div>
+        <h3 class="leader-name">Mr. Dhanvijay Patil</h3>
+        <span class="leader-role">Director — Operations & Fleet</span>
+        <p class="leader-bio">
+          Credited with modernizing fleet operations, inducting multi-axle luxury coaches, and enhancing passenger comfort standards.
+        </p>
+      </div>
+
+      <div class="leader-card">
+        <div class="leader-avatar-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3 class="leader-name">Mr. Dharmasen Patil</h3>
+        <span class="leader-role">Director — Digital Services & Logistics</span>
+        <p class="leader-bio">
+          Spearheading digital transformation, online booking platforms, mobile app development, and cargo parcel network expansion.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFICES & CONTACT SECTION -->
+  <section id="contact" class="scrollytelling-chapter">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
+      <span class="editorial-tag">Get In Touch</span>
+      <h2 style="font-size: 3rem;">Head Office & Corporate Office</h2>
+      <div class="gold-keyline"></div>
+    </div>
+
+    <div class="offices-grid">
+      <div class="office-box">
+        <h3><i class="fas fa-building"></i> Head Office (Jalgaon)</h3>
+        <p style="font-size: 1.05rem; font-weight: 600; color: var(--clr-ink-dark); margin-bottom: 8px;">Sangitam Travels Head Office</p>
+        <p style="color: var(--clr-ink-sepia); line-height: 1.7; margin-bottom: 16px;">12, Lewa Boarding Complex, Near Rainbow Photo Studio, Jalgaon – 425001, Maharashtra.</p>
+        <p><i class="fas fa-phone-alt" style="color: var(--clr-wax-red);"></i> +91 (257) 222-1983 / 222-5582</p>
+        <p><i class="fas fa-envelope" style="color: var(--clr-wax-red);"></i> support@sangitamtravels.com</p>
+      </div>
+
+      <div class="office-box">
+        <h3><i class="fas fa-briefcase"></i> Corporate Office (Pune)</h3>
+        <p style="font-size: 1.05rem; font-weight: 600; color: var(--clr-ink-dark); margin-bottom: 8px;">Sangitam Travels Corporate Office</p>
+        <p style="color: var(--clr-ink-sepia); line-height: 1.7; margin-bottom: 16px;">Office No. 303, Garden Plaza, Five Gardens Road, Near Jagtap Dairy, Rahatani, Pimpri Chinchwad, Pune – 411027.</p>
+        <p><i class="fas fa-phone-alt" style="color: var(--clr-wax-red);"></i> +91 (20) 2727-1983 / 2727-8899</p>
+        <p><i class="fas fa-envelope" style="color: var(--clr-wax-red);"></i> pune@sangitamtravels.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sangitam-footer-wrapper">
+    <div class="terrain-horizon-container">
+      <svg class="terrain-svg-path" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+        <path d="M0,45 C280,95 560,10 880,80 C1140,130 1320,35 1440,65 L1440,120 L0,120 Z" fill="#6B0E1E"/>
+        <path d="M0,35 C260,85 540,5 860,70 C1120,120 1300,25 1440,55 L1440,75 C1300,45 1120,140 860,90 C540,25 260,105 0,55 Z" fill="#9E1B32"/>
+      </svg>
+      <div class="horizon-stamp-badge">
+        <span class="marathi-badge-text">DIGITAL</span>
+        <span class="marathi-badge-text" style="font-size: 0.88rem;">SANGITAM</span>
+        <span class="year-badge-text">Est. 1983</span>
+      </div>
+    </div>
+
+    <div class="footer-body-content">
+      <div class="footer-brand-col">
+        <h3>SANGITAM TRAVELS</h3>
+        <p>Serving Maharashtra with excellence since 1983. Delivering 40+ years of safe and trusted journeys.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>QUICK NAVIGATION</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-angle-right"></i> Services</a></li>
+          <li><a href="fleet.html"><i class="fas fa-angle-right"></i> Fleet & Seats</a></li>
+          <li><a href="routes.html"><i class="fas fa-angle-right"></i> Routes</a></li>
+          <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>OFFICE HOURS & CONTACT</h4>
+        <div class="footer-contact-info">
+          <p><i class="far fa-clock"></i> <span>Mon - Sun: 24/7 Support Helpline</span></p>
+          <p><i class="fas fa-map-marker-alt"></i> <span>Jalgaon HQ: 12, Lewa Boarding Complex, Jalgaon – 425001</span></p>
+          <p><i class="fas fa-building"></i> <span>Pune Office: Office 303, Garden Plaza, Rahatani, Pune – 411027</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div>© 2026 Sangitam Travels Ltd. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <!-- MODAL DIALOG -->
+  <div id="sangitamModal" class="modal-sangitam-overlay">
+    <div class="modal-sangitam-card">
+      <button class="modal-close-cross">&times;</button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <div class="badge-modern-glow" style="margin-bottom: 10px;">Est. 1983</div>
+        <h3 id="modalTitle" style="font-size: 1.8rem; color: var(--clr-ink-dark);">Sangitam Support</h3>
+        <p id="modalSubtitle" style="font-size: 0.9rem; color: var(--clr-ink-sepia);">Enter your details below.</p>
+      </div>
+      <form id="modalContactForm">
+        <div style="margin-bottom: 14px;"><input type="text" class="form-sangitam-control" style="width: 100%;" required placeholder="Full Name *"></div>
+        <div style="margin-bottom: 14px;"><input type="tel" class="form-sangitam-control" style="width: 100%;" required placeholder="Mobile Number *"></div>
+        <button type="submit" class="btn-primary-sangitam" style="width: 100%;"><i class="fas fa-paper-plane"></i> Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- THREE.JS & GLTF LOADERS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="js/three-world.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

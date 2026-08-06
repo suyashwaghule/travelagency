@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Routes & Schedule | Sangitam Travels — Connecting Maharashtra</title>
+  <meta name="description" content="Explore Sangitam Travels' inter-city bus routes across Maharashtra: Jalgaon to Pune, Bhusawal to Pune, Nashik, Sambhajinagar, Mumbai, and Nagpur timetables & fare details.">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP EDITION BAR -->
+  <div class="top-edition-bar">
+    <div>
+      <i class="fas fa-bus" style="color: var(--clr-user-peach-gold);"></i> SANGITAM TRAVELS — SERVING PASSENGERS SINCE 1983 • 40+ YEARS OF LEGACY
+    </div>
+    <div style="display: flex; gap: 20px;">
+      <span><i class="fas fa-phone-alt"></i> Jalgaon HQ: +91 (257) 222-1983</span>
+      <span><i class="fas fa-phone-alt"></i> Pune Corporate: +91 (20) 2727-1983</span>
+    </div>
+  </div>
+
+  <!-- JOURNAL NAVIGATION HEADER -->
+  <header class="journal-header">
+    <div class="journal-nav-container">
+      
+      <a href="index.html" class="brand-sangitam-logo">
+        <div class="brand-monogram-box">
+          <img src="images/anniversary_seal.png" alt="Sangitam Travels 1983 Crest" style="width: 38px; height: 38px; object-fit: contain;">
+        </div>
+        <div>
+          <div class="brand-name-sangitam">SANGITAM TRAVELS</div>
+          <div class="brand-sub-sangitam">Est. 1983 • Jalgaon & Pune</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="journal-nav-links">
+          <li><a href="index.html" class="journal-nav-link">Home</a></li>
+          <li><a href="about.html" class="journal-nav-link">About Us</a></li>
+          <li><a href="services.html" class="journal-nav-link">Services</a></li>
+          <li><a href="fleet.html" class="journal-nav-link">Fleet & Seats</a></li>
+          <li><a href="routes.html" class="journal-nav-link active">Routes</a></li>
+          <li><a href="contact.html" class="journal-nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Bus Ticket">
+          <i class="fas fa-ticket-alt"></i> Book Ticket
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- PAGE HERO HEADER -->
+  <section class="hero-sangitam-section" style="padding-top: 60px; padding-bottom: 40px;">
+    <div class="hero-sangitam-header">
+      <div class="badge-1983" style="margin-bottom: 14px;">Inter-City Connectivity</div>
+      <h1 class="hero-sangitam-title">Routes & Timetable Network</h1>
+      <p class="hero-sangitam-sub">
+        Daily premium AC sleeper services connecting North Maharashtra, Pune, Mumbai, Marathwada, and Vidarbha.
+      </p>
+      <div class="gold-keyline"></div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE MAHARASHTRA MAP -->
+  <section id="routeMap" style="padding: 0 24px 60px; max-width: 1340px; margin: 0 auto;">
+    <div class="map-interactive-container" style="margin: 0 auto;">
+      <div class="svg-map-stage">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; height: 100%; min-height: 280px; padding: 20px;">
+          <button class="city-node-btn active" data-city="jalgaon"><i class="fas fa-map-pin"></i> Jalgaon (HQ)</button>
+          <button class="city-node-btn" data-city="pune"><i class="fas fa-map-pin"></i> Pune Hub</button>
+          <button class="city-node-btn" data-city="nashik"><i class="fas fa-map-pin"></i> Nashik</button>
+          <button class="city-node-btn" data-city="sambhajinagar"><i class="fas fa-map-pin"></i> Sambhajinagar</button>
+          <button class="city-node-btn" data-city="mumbai"><i class="fas fa-map-pin"></i> Mumbai Region</button>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <span class="editorial-tag" style="font-size: 0.9rem;">Terminal Inspection</span>
+        <h3 id="mapRouteTitle" style="font-size: 1.8rem; margin: 8px 0;">Jalgaon (Sangitam Head Office)</h3>
+        <p id="mapRouteMeta" style="color: var(--clr-wax-red); font-weight: bold; font-size: 0.95rem; margin-bottom: 14px;">
+          Origin Hub • 8 Daily Services to Pune & Mumbai
+        </p>
+        <p id="mapRouteDesc" style="color: var(--clr-ink-sepia); font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+          Sangitam Travels was born in Jalgaon in 1983. Operating daily premium AC sleeper coaches from Lewa Boarding Complex to Pune, Mumbai, Nashik, and Surat.
+        </p>
+        <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Route Service">
+          <i class="fas fa-ticket-alt"></i> Reserve Seat on Route
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR ROUTES GRID WITH STYLED CARDS -->
+  <section class="routes-sangitam-section" style="padding-top: 0;">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
+      <span class="editorial-tag">Daily Timetable</span>
+      <h2 style="font-size: 2.8rem;">Popular Bus Routes</h2>
+      <div class="gold-keyline"></div>
+    </div>
+
+    <div class="routes-grid-sangitam">
+      
+      <!-- Route 1 -->
+      <div class="route-sangitam-card">
+        <div>
+          <div class="route-cities-title">
+            <span>Jalgaon</span> <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i> <span>Pune</span>
+          </div>
+          <div class="route-meta-info">
+            <span><i class="far fa-clock"></i> Daily 8 Services</span>
+            <span><i class="fas fa-snowflake"></i> AC Sleeper</span>
+          </div>
+          <div style="background: var(--clr-bg-warm-ivory); border-radius: 6px; padding: 12px; margin-bottom: 18px; border: 1px solid rgba(158, 27, 50, 0.15);">
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Boarding:</strong> Jalgaon Lewa Boarding Complex</p>
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Departures:</strong> 20:00, 21:00, 21:45, 22:30</p>
+            <p style="font-size: 0.95rem; color: var(--clr-wax-red); font-weight: bold;">Fare: ₹950 per berth</p>
+          </div>
+        </div>
+        <button class="btn-secondary-gold btn-trigger-modal" data-title="Book Jalgaon to Pune Coach">
+          Book Ticket <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Route 2 -->
+      <div class="route-sangitam-card">
+        <div>
+          <div class="route-cities-title">
+            <span>Pune</span> <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i> <span>Bhusawal</span>
+          </div>
+          <div class="route-meta-info">
+            <span><i class="far fa-clock"></i> Daily 6 Services</span>
+            <span><i class="fas fa-snowflake"></i> AC Sleeper</span>
+          </div>
+          <div style="background: var(--clr-bg-warm-ivory); border-radius: 6px; padding: 12px; margin-bottom: 18px; border: 1px solid rgba(158, 27, 50, 0.15);">
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Boarding:</strong> Pune Garden Plaza Rahatani</p>
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Departures:</strong> 21:00, 21:30, 22:15</p>
+            <p style="font-size: 0.95rem; color: var(--clr-wax-red); font-weight: bold;">Fare: ₹950 per berth</p>
+          </div>
+        </div>
+        <button class="btn-secondary-gold btn-trigger-modal" data-title="Book Pune to Bhusawal Coach">
+          Book Ticket <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Route 3 -->
+      <div class="route-sangitam-card">
+        <div>
+          <div class="route-cities-title">
+            <span>Pune</span> <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i> <span>Aurangabad</span>
+          </div>
+          <div class="route-meta-info">
+            <span><i class="far fa-clock"></i> Daily 10 Services</span>
+            <span><i class="fas fa-snowflake"></i> AC Sleeper</span>
+          </div>
+          <div style="background: var(--clr-bg-warm-ivory); border-radius: 6px; padding: 12px; margin-bottom: 18px; border: 1px solid rgba(158, 27, 50, 0.15);">
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Boarding:</strong> Pune Jagtap Dairy & Swargate</p>
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Departures:</strong> Hourly from 06:00 AM</p>
+            <p style="font-size: 0.95rem; color: var(--clr-wax-red); font-weight: bold;">Fare: ₹650 per berth</p>
+          </div>
+        </div>
+        <button class="btn-secondary-gold btn-trigger-modal" data-title="Book Pune to Aurangabad Coach">
+          Book Ticket <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Route 4 -->
+      <div class="route-sangitam-card">
+        <div>
+          <div class="route-cities-title">
+            <span>Nashik</span> <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i> <span>Jalgaon</span>
+          </div>
+          <div class="route-meta-info">
+            <span><i class="far fa-clock"></i> Daily 4 Services</span>
+            <span><i class="fas fa-snowflake"></i> AC Sleeper</span>
+          </div>
+          <div style="background: var(--clr-bg-warm-ivory); border-radius: 6px; padding: 12px; margin-bottom: 18px; border: 1px solid rgba(158, 27, 50, 0.15);">
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Boarding:</strong> Nashik Dwarka Circle</p>
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Departures:</strong> 14:00, 18:30, 22:00</p>
+            <p style="font-size: 0.95rem; color: var(--clr-wax-red); font-weight: bold;">Fare: ₹600 per berth</p>
+          </div>
+        </div>
+        <button class="btn-secondary-gold btn-trigger-modal" data-title="Book Nashik to Jalgaon Coach">
+          Book Ticket <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Route 5 -->
+      <div class="route-sangitam-card">
+        <div>
+          <div class="route-cities-title">
+            <span>Pune</span> <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i> <span>Nagpur</span>
+          </div>
+          <div class="route-meta-info">
+            <span><i class="far fa-clock"></i> Daily 5 Services</span>
+            <span><i class="fas fa-snowflake"></i> Volvo Multi-Axle</span>
+          </div>
+          <div style="background: var(--clr-bg-warm-ivory); border-radius: 6px; padding: 12px; margin-bottom: 18px; border: 1px solid rgba(158, 27, 50, 0.15);">
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Boarding:</strong> Pune Swargate & Rahatani</p>
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Departures:</strong> 18:00, 19:30, 20:45</p>
+            <p style="font-size: 0.95rem; color: var(--clr-wax-red); font-weight: bold;">Fare: ₹1400 per berth</p>
+          </div>
+        </div>
+        <button class="btn-secondary-gold btn-trigger-modal" data-title="Book Pune to Nagpur Coach">
+          Book Ticket <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Route 6 -->
+      <div class="route-sangitam-card">
+        <div>
+          <div class="route-cities-title">
+            <span>Mumbai</span> <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i> <span>Jalna</span>
+          </div>
+          <div class="route-meta-info">
+            <span><i class="far fa-clock"></i> Daily 4 Services</span>
+            <span><i class="fas fa-snowflake"></i> AC Sleeper</span>
+          </div>
+          <div style="background: var(--clr-bg-warm-ivory); border-radius: 6px; padding: 12px; margin-bottom: 18px; border: 1px solid rgba(158, 27, 50, 0.15);">
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Boarding:</strong> Mumbai Dadar TT & Thane</p>
+            <p style="font-size: 0.92rem; color: var(--clr-ink-dark); margin-bottom: 4px;"><strong>Departures:</strong> 20:30, 21:45</p>
+            <p style="font-size: 0.95rem; color: var(--clr-wax-red); font-weight: bold;">Fare: ₹1100 per berth</p>
+          </div>
+        </div>
+        <button class="btn-secondary-gold btn-trigger-modal" data-title="Book Mumbai to Jalna Coach">
+          Book Ticket <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sangitam-footer-wrapper">
+    <div class="terrain-horizon-container">
+      <svg class="terrain-svg-path" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+        <path d="M0,45 C280,95 560,10 880,80 C1140,130 1320,35 1440,65 L1440,120 L0,120 Z" fill="#6B0E1E"/>
+        <path d="M0,35 C260,85 540,5 860,70 C1120,120 1300,25 1440,55 L1440,75 C1300,45 1120,140 860,90 C540,25 260,105 0,55 Z" fill="#9E1B32"/>
+      </svg>
+      <div class="horizon-stamp-badge">
+        <span class="marathi-badge-text">DIGITAL</span>
+        <span class="marathi-badge-text" style="font-size: 0.88rem;">SANGITAM</span>
+        <span class="year-badge-text">Est. 1983</span>
+      </div>
+    </div>
+
+    <div class="footer-body-content">
+      <div class="footer-brand-col">
+        <h3>SANGITAM TRAVELS</h3>
+        <p>Serving Maharashtra with excellence since 1983. Delivering 40+ years of safe and trusted journeys.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>QUICK NAVIGATION</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-angle-right"></i> Services</a></li>
+          <li><a href="fleet.html"><i class="fas fa-angle-right"></i> Fleet & Seats</a></li>
+          <li><a href="routes.html"><i class="fas fa-angle-right"></i> Routes</a></li>
+          <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>OFFICE HOURS & CONTACT</h4>
+        <div class="footer-contact-info">
+          <p><i class="far fa-clock"></i> <span>Mon - Sun: 24/7 Support Helpline</span></p>
+          <p><i class="fas fa-map-marker-alt"></i> <span>Jalgaon HQ: 12, Lewa Boarding Complex, Jalgaon – 425001</span></p>
+          <p><i class="fas fa-building"></i> <span>Pune Office: Office 303, Garden Plaza, Rahatani, Pune – 411027</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div>© 2026 Sangitam Travels Ltd. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <!-- MODAL DIALOG -->
+  <div id="sangitamModal" class="modal-sangitam-overlay">
+    <div class="modal-sangitam-card">
+      <button class="modal-close-cross">&times;</button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <div class="badge-1983" style="margin-bottom: 10px;">Est. 1983</div>
+        <h3 id="modalTitle" style="font-size: 1.8rem; color: var(--clr-ink-dark);">Sangitam Support</h3>
+        <p id="modalSubtitle" style="font-size: 0.9rem; color: var(--clr-ink-sepia);">Enter your details below.</p>
+      </div>
+      <form id="modalContactForm">
+        <div style="margin-bottom: 14px;"><input type="text" class="form-sangitam-control" style="width: 100%;" required placeholder="Full Name *"></div>
+        <div style="margin-bottom: 14px;"><input type="tel" class="form-sangitam-control" style="width: 100%;" required placeholder="Mobile Number *"></div>
+        <button type="submit" class="btn-primary-sangitam" style="width: 100%;"><i class="fas fa-paper-plane"></i> Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
