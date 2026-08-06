@@ -11,13 +11,13 @@
 </head>
 <body>
 
-  <!-- FLOATING GLASSMORPHISM NAVIGATION BAR -->
+  <!-- MOBILE-FIRST FLOATING GLASSMORPHISM NAVIGATION BAR -->
   <div class="modern-floating-nav-wrapper">
     <nav class="modern-nav-capsule">
       
       <a href="index.html" class="modern-brand-link">
         <div class="modern-brand-badge">
-          <img src="images/anniversary_seal.png" alt="Sangitam Travels Crest" style="width: 32px; height: 32px; object-fit: contain;">
+          <img src="images/anniversary_seal.png" alt="Sangitam Travels Crest" style="width: 28px; height: 28px; object-fit: contain;">
         </div>
         <div>
           <div class="modern-brand-name">SANGITAM</div>
@@ -25,7 +25,12 @@
         </div>
       </a>
 
-      <ul class="modern-nav-menu">
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul id="modernNavMenu" class="modern-nav-menu">
         <li class="modern-nav-item"><a href="index.html">Home</a></li>
         <li class="modern-nav-item"><a href="about.html">About Us</a></li>
         <li class="modern-nav-item"><a href="services.html">Services</a></li>
@@ -47,39 +52,14 @@
   </div>
 
   <!-- PAGE HERO HEADER -->
-  <section class="hero-sangitam-section" style="padding-top: 60px; padding-bottom: 40px;">
+  <section class="hero-sangitam-section" style="padding-top: 40px; padding-bottom: 30px;">
     <div class="hero-sangitam-header">
-      <div class="badge-modern-glow" style="margin-bottom: 14px;">100+ Company-Owned Buses</div>
-      <h1 class="hero-sangitam-title">Our Premium Luxury Fleet</h1>
-      <p class="hero-sangitam-sub">
+      <div class="badge-modern-glow" style="margin-bottom: 10px;">100+ Company-Owned Buses</div>
+      <h1 class="hero-sangitam-title" style="font-size: 2.2rem;">Our Premium Luxury Fleet</h1>
+      <p class="hero-sangitam-sub" style="font-size: 0.95rem;">
         Explore our modern fleet of air-conditioned sleeper coaches, equipped with air suspension, live GPS tracking, USB charging ports, and 2+1 berth layouts.
       </p>
       <div class="gold-keyline"></div>
-    </div>
-  </section>
-
-  <!-- SKETCHFAB 3D BUS EXPLORER SECTION -->
-  <section style="max-width: 1280px; margin: 0 auto 60px; padding: 0 24px;">
-    <div style="text-align: center; margin-bottom: 24px;">
-      <span class="editorial-tag">Interactive 3D Inspection</span>
-      <h2 style="font-size: 2.4rem;">Celcius 3D Luxury Sleeper Coach</h2>
-      <p style="color: var(--clr-ink-sepia); font-size: 1rem;">Use your mouse or touch screen to rotate, pan, and zoom into the 3D bus model below.</p>
-    </div>
-
-    <div style="background: #0F172A; border-radius: 14px; overflow: hidden; height: 500px; border: 1.5px solid var(--clr-wax-red); box-shadow: var(--shadow-card);">
-      <iframe title="Celcius 3D Luxury Sleeper Coach" 
-              frameborder="0" 
-              allowfullscreen 
-              mozallowfullscreen="true" 
-              webkitallowfullscreen="true" 
-              allow="autoplay; fullscreen; xr-spatial-tracking" 
-              xr-spatial-tracking 
-              execution-while-out-of-viewport 
-              execution-while-not-rendered 
-              web-share 
-              src="https://sketchfab.com/models/baebf2d381f942aa964b4bfe54e94500/embed?autostart=1&camera=0&ui_theme=dark&ui_infos=0&ui_watermark=0" 
-              style="width: 100%; height: 100%; border: none;">
-      </iframe>
     </div>
   </section>
 
@@ -89,19 +69,19 @@
       
       <!-- Coach 1 -->
       <div class="fleet-coach-card">
-        <div class="fleet-img-wrapper">
-          <img src="images/dest_swiss.png" alt="Mercedes-Benz AC Sleeper Coach">
+        <div class="fleet-img-wrapper" style="height: 200px; overflow: hidden; border-radius: 6px;">
+          <img src="images/dest_swiss.png" alt="Mercedes-Benz AC Sleeper Coach" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <div class="fleet-card-body">
-          <h3>Mercedes-Benz Multi-Axle AC Sleeper</h3>
-          <p style="color: var(--clr-ink-sepia); font-size: 0.95rem;">Flagship luxury coach with individual berth curtains, plush mattress, and air-suspension smooth ride.</p>
-          <div class="amenities-pill-grid">
-            <div class="amenity-pill"><i class="fas fa-snowflake"></i> AC Climate Control</div>
-            <div class="amenity-pill"><i class="fas fa-plug"></i> USB Charging</div>
-            <div class="amenity-pill"><i class="fas fa-wifi"></i> Free Wi-Fi</div>
-            <div class="amenity-pill"><i class="fas fa-satellite-dish"></i> GPS Tracking</div>
+        <div class="fleet-card-body" style="padding: 16px 0 0;">
+          <h3 style="font-size: 1.35rem; color: var(--clr-ink-dark); margin-bottom: 6px;">Mercedes-Benz Multi-Axle AC Sleeper</h3>
+          <p style="color: var(--clr-ink-sepia); font-size: 0.92rem;">Flagship luxury coach with individual berth curtains, plush mattress, and air-suspension smooth ride.</p>
+          <div class="amenities-pill-grid" style="display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0;">
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-snowflake" style="color: var(--clr-wax-red);"></i> AC Climate Control</div>
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-plug" style="color: var(--clr-wax-red);"></i> USB Charging</div>
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-wifi" style="color: var(--clr-wax-red);"></i> Free Wi-Fi</div>
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-satellite-dish" style="color: var(--clr-wax-red);"></i> GPS Tracking</div>
           </div>
-          <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Mercedes-Benz Sleeper" style="width: 100%; margin-top: 10px;">
+          <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Mercedes-Benz Sleeper" style="width: 100%; margin-top: 8px;">
             <i class="fas fa-ticket-alt"></i> Select Berth & Book
           </button>
         </div>
@@ -109,19 +89,18 @@
 
       <!-- Coach 2 -->
       <div class="fleet-coach-card">
-        <div class="fleet-img-wrapper">
-          <img src="images/cabin_luxury.png" alt="Scania Metrolink AC Sleeper">
+        <div class="fleet-img-wrapper" style="height: 200px; overflow: hidden; border-radius: 6px;">
+          <img src="images/cabin_luxury.png" alt="Scania Metrolink AC Sleeper" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <div class="fleet-card-body">
-          <h3>Scania Metrolink 2+1 AC Sleeper</h3>
-          <p style="color: var(--clr-ink-sepia); font-size: 0.95rem;">Ergonomic upper and lower berth layout designed for long-distance night travel with individual reading lamps.</p>
-          <div class="amenities-pill-grid">
-            <div class="amenity-pill"><i class="fas fa-bed"></i> 2+1 Sleeper Berths</div>
-            <div class="amenity-pill"><i class="fas fa-lightbulb"></i> Reading Light</div>
-            <div class="amenity-pill"><i class="fas fa-shield-alt"></i> Safety Belt</div>
-            <div class="amenity-pill"><i class="fas fa-first-aid"></i> First Aid Kit</div>
+        <div class="fleet-card-body" style="padding: 16px 0 0;">
+          <h3 style="font-size: 1.35rem; color: var(--clr-ink-dark); margin-bottom: 6px;">Scania Metrolink 2+1 AC Sleeper</h3>
+          <p style="color: var(--clr-ink-sepia); font-size: 0.92rem;">Ergonomic upper and lower berth layout designed for long-distance night travel with individual reading lamps.</p>
+          <div class="amenities-pill-grid" style="display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0;">
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-bed" style="color: var(--clr-wax-red);"></i> 2+1 Sleeper Berths</div>
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-lightbulb" style="color: var(--clr-wax-red);"></i> Reading Light</div>
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-shield-alt" style="color: var(--clr-wax-red);"></i> Safety Belt</div>
           </div>
-          <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Scania Metrolink Sleeper" style="width: 100%; margin-top: 10px;">
+          <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Scania Metrolink Sleeper" style="width: 100%; margin-top: 8px;">
             <i class="fas fa-ticket-alt"></i> Select Berth & Book
           </button>
         </div>
@@ -129,19 +108,18 @@
 
       <!-- Coach 3 -->
       <div class="fleet-coach-card">
-        <div class="fleet-img-wrapper">
-          <img src="images/hero_banner.png" alt="Volvo Multi-Axle AC Sleeper">
+        <div class="fleet-img-wrapper" style="height: 200px; overflow: hidden; border-radius: 6px;">
+          <img src="images/hero_banner.png" alt="Volvo Multi-Axle AC Sleeper" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <div class="fleet-card-body">
-          <h3>Volvo Multi-Axle AC Sleeper</h3>
-          <p style="color: var(--clr-ink-sepia); font-size: 0.95rem;">High-speed express inter-city coach operating daily between Jalgaon, Pune, Mumbai, and Sambhajinagar.</p>
-          <div class="amenities-pill-grid">
-            <div class="amenity-pill"><i class="fas fa-tachometer-alt"></i> Express Service</div>
-            <div class="amenity-pill"><i class="fas fa-glass-cheers"></i> Water Bottle</div>
-            <div class="amenity-pill"><i class="fas fa-video"></i> CCTV Security</div>
-            <div class="amenity-pill"><i class="fas fa-charging-station"></i> 220V Charging</div>
+        <div class="fleet-card-body" style="padding: 16px 0 0;">
+          <h3 style="font-size: 1.35rem; color: var(--clr-ink-dark); margin-bottom: 6px;">Volvo Multi-Axle AC Sleeper</h3>
+          <p style="color: var(--clr-ink-sepia); font-size: 0.92rem;">High-speed express inter-city coach operating daily between Jalgaon, Pune, Mumbai, and Sambhajinagar.</p>
+          <div class="amenities-pill-grid" style="display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0;">
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-tachometer-alt" style="color: var(--clr-wax-red);"></i> Express Service</div>
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-glass-cheers" style="color: var(--clr-wax-red);"></i> Water Bottle</div>
+            <div class="amenity-pill" style="background: var(--clr-bg-warm-ivory); padding: 4px 10px; border-radius: 16px; font-size: 0.78rem; font-weight: 700;"><i class="fas fa-video" style="color: var(--clr-wax-red);"></i> CCTV Security</div>
           </div>
-          <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Volvo AC Sleeper" style="width: 100%; margin-top: 10px;">
+          <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Volvo AC Sleeper" style="width: 100%; margin-top: 8px;">
             <i class="fas fa-ticket-alt"></i> Select Berth & Book
           </button>
         </div>
@@ -150,20 +128,8 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- LIGHT FOOTER -->
   <footer class="sangitam-footer-wrapper">
-    <div class="terrain-horizon-container">
-      <svg class="terrain-svg-path" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
-        <path d="M0,45 C280,95 560,10 880,80 C1140,130 1320,35 1440,65 L1440,120 L0,120 Z" fill="#6B0E1E"/>
-        <path d="M0,35 C260,85 540,5 860,70 C1120,120 1300,25 1440,55 L1440,75 C1300,45 1120,140 860,90 C540,25 260,105 0,55 Z" fill="#9E1B32"/>
-      </svg>
-      <div class="horizon-stamp-badge">
-        <span class="marathi-badge-text">DIGITAL</span>
-        <span class="marathi-badge-text" style="font-size: 0.88rem;">SANGITAM</span>
-        <span class="year-badge-text">Est. 1983</span>
-      </div>
-    </div>
-
     <div class="footer-body-content">
       <div class="footer-brand-col">
         <h3>SANGITAM TRAVELS</h3>
@@ -180,14 +146,6 @@
           <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
         </ul>
       </div>
-      <div class="footer-contact-col">
-        <h4>OFFICE HOURS & CONTACT</h4>
-        <div class="footer-contact-info">
-          <p><i class="far fa-clock"></i> <span>Mon - Sun: 24/7 Support Helpline</span></p>
-          <p><i class="fas fa-map-marker-alt"></i> <span>Jalgaon HQ: 12, Lewa Boarding Complex, Jalgaon – 425001</span></p>
-          <p><i class="fas fa-building"></i> <span>Pune Office: Office 303, Garden Plaza, Rahatani, Pune – 411027</span></p>
-        </div>
-      </div>
     </div>
 
     <div class="footer-bottom-bar">
@@ -201,12 +159,12 @@
       <button class="modal-close-cross">&times;</button>
       <div style="text-align: center; margin-bottom: 20px;">
         <div class="badge-modern-glow" style="margin-bottom: 10px;">Est. 1983</div>
-        <h3 id="modalTitle" style="font-size: 1.8rem; color: var(--clr-ink-dark);">Sangitam Support</h3>
-        <p id="modalSubtitle" style="font-size: 0.9rem; color: var(--clr-ink-sepia);">Enter your details below.</p>
+        <h3 id="modalTitle" style="font-size: 1.6rem; color: var(--clr-ink-dark);">Sangitam Support</h3>
+        <p id="modalSubtitle" style="font-size: 0.88rem; color: var(--clr-ink-sepia);">Enter your details below.</p>
       </div>
       <form id="modalContactForm">
-        <div style="margin-bottom: 14px;"><input type="text" class="form-sangitam-control" style="width: 100%;" required placeholder="Full Name *"></div>
-        <div style="margin-bottom: 14px;"><input type="tel" class="form-sangitam-control" style="width: 100%;" required placeholder="Mobile Number *"></div>
+        <div style="margin-bottom: 12px;"><input type="text" class="form-sangitam-control" style="width: 100%;" required placeholder="Full Name *"></div>
+        <div style="margin-bottom: 12px;"><input type="tel" class="form-sangitam-control" style="width: 100%;" required placeholder="Mobile Number *"></div>
         <button type="submit" class="btn-primary-sangitam" style="width: 100%;"><i class="fas fa-paper-plane"></i> Submit Request</button>
       </form>
     </div>

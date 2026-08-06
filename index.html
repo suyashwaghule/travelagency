@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sangitam Travels | Mobile-First WebGL 3D Travel Experience Since 1983</title>
+  <title>Sangitam Travels | High-Visibility Light Theme WebGL Travel Experience Since 1983</title>
   <meta name="description" content="Founded in 1983 by Mr. Vinod Patil. Sangitam Travels is Maharashtra's premier private bus & parcel operator with 100+ luxury AC sleeper coaches, live GPS tracking, and parcel services.">
   
   <!-- CSS Stylesheet -->
@@ -74,7 +74,7 @@
       <!-- Left Column: Value Proposition -->
       <div>
         <div class="badge-modern-glow">
-          <i class="fas fa-mobile-alt" style="color: var(--clr-wax-red);"></i> MOBILE-FIRST 3D EXPERIENCE • EST. 1983
+          <i class="fas fa-star" style="color: var(--clr-wax-red);"></i> ESTABLISHED 1983 • 40+ YEARS OF EXCELLENCE
         </div>
 
         <h1 class="hero-modern-headline">
@@ -90,7 +90,7 @@
             <i class="fas fa-ticket-alt"></i> Book Tickets Now
           </button>
           <a href="fleet.html" class="btn-secondary-gold">
-            <i class="fas fa-cube"></i> View 3D Fleet Lounge
+            <i class="fas fa-eye"></i> View Fleet & Seats
           </a>
         </div>
 
@@ -301,35 +301,39 @@
     </div>
   </section>
 
-  <!-- CHAPTER II: INSIDE THE LUXURY SUITE -->
+  <!-- CHAPTER II: INSIDE THE LUXURY SUITE (CLEAN HIGH-CONTRAST LIGHT STAGE) -->
   <section id="cabinExplorer" class="scrollytelling-chapter">
     <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-      <span class="editorial-tag">Chapter II — Interactive 3D Model</span>
-      <h2 style="font-size: 2.4rem;">Celcius 3D Luxury Coach Model</h2>
+      <span class="editorial-tag">Chapter II — Luxury on Wheels</span>
+      <h2 style="font-size: 2.4rem;">Sleeper Suite Comforts</h2>
       <div class="gold-keyline"></div>
       <p style="color: var(--clr-ink-sepia);">
-        Drag, rotate, and zoom the real interactive 3D bus model below created by hanzelart.
+        Inspect the ergonomic sleeper berths, air suspension cabin, and cockpit safety desk.
       </p>
     </div>
 
     <div class="cabin-explorer-wrapper">
-      <div class="cabin-visual-stage" style="height: 420px; background: #0F172A; border-radius: 12px; overflow: hidden; position: relative;">
-        
-        <!-- SKETCHFAB EMBEDDED REAL 3D VIEWER -->
-        <iframe title="Celcius 3D Luxury Sleeper Coach" 
-                frameborder="0" 
-                allowfullscreen 
-                mozallowfullscreen="true" 
-                webkitallowfullscreen="true" 
-                allow="autoplay; fullscreen; xr-spatial-tracking" 
-                xr-spatial-tracking 
-                execution-while-out-of-viewport 
-                execution-while-not-rendered 
-                web-share 
-                src="https://sketchfab.com/models/baebf2d381f942aa964b4bfe54e94500/embed?autostart=1&camera=0&ui_theme=dark&ui_infos=0&ui_watermark=0" 
-                style="width: 100%; height: 100%; border: none;">
-        </iframe>
+      <div class="cabin-visual-stage" style="height: 380px; background: #FFFFFF; border-radius: 12px; overflow: hidden; position: relative; border: 1.5px solid rgba(139, 38, 62, 0.2);">
+        <img id="cabinStageImg" src="images/cabin_luxury.png" alt="Sangitam Sleeper Suite Cabin View" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
 
+      <div class="cabin-controls-panel" style="padding: 24px;">
+        <div class="view-switcher-tabs" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+          <button class="view-tab-btn active" data-view="upper">Upper Sleeper Suite</button>
+          <button class="view-tab-btn" data-view="lower">Lower Sleeper Suite</button>
+          <button class="view-tab-btn" data-view="cockpit">Scania Cockpit</button>
+        </div>
+
+        <h3 id="cabinStageTitle" style="font-size: 1.5rem; margin-bottom: 8px;">Upper Sleeper Berth Suite</h3>
+        <p id="cabinStageDesc" style="color: var(--clr-ink-sepia); font-size: 0.98rem; line-height: 1.65; margin-bottom: 20px;">
+          Ergonomic plush sleeper berth equipped with personal reading light, dual USB charging ports, privacy curtains, and individual AC vents.
+        </p>
+
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="background: var(--clr-bg-warm-ivory); border: 1px solid var(--clr-wax-red); padding: 5px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: bold; color: var(--clr-ink-dark);"><i class="fas fa-bed" style="color: var(--clr-wax-red);"></i> AC Sleeper</span>
+          <span style="background: var(--clr-bg-warm-ivory); border: 1px solid var(--clr-wax-red); padding: 5px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: bold; color: var(--clr-ink-dark);"><i class="fas fa-wifi" style="color: var(--clr-wax-red);"></i> Onboard Wi-Fi</span>
+          <span style="background: var(--clr-bg-warm-ivory); border: 1px solid var(--clr-wax-red); padding: 5px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: bold; color: var(--clr-ink-dark);"><i class="fas fa-satellite-dish" style="color: var(--clr-wax-red);"></i> GPS Radar</span>
+        </div>
       </div>
     </div>
   </section>
@@ -384,7 +388,7 @@
     </div>
 
     <div class="seatmap-modal-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid rgba(158, 27, 50, 0.15); padding-bottom: 14px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid rgba(139, 38, 62, 0.15); padding-bottom: 14px;">
         <div>
           <h4 style="font-size: 1.2rem; color: var(--clr-ink-dark);">AC Sleeper Coach (2+1 Layout)</h4>
           <p style="color: var(--clr-ink-sepia); font-size: 0.88rem;">Jalgaon HQ ➔ Pune Office</p>
@@ -392,7 +396,7 @@
         <div style="display: flex; gap: 12px; font-size: 0.78rem; font-weight: bold;">
           <span><span style="display: inline-block; width: 10px; height: 10px; background: #FFFFFF; border: 1px solid var(--clr-wax-red); border-radius: 2px;"></span> Available</span>
           <span><span style="display: inline-block; width: 10px; height: 10px; background: var(--clr-wax-red); border-radius: 2px;"></span> Selected</span>
-          <span><span style="display: inline-block; width: 10px; height: 10px; background: rgba(110, 92, 82, 0.2); border-radius: 2px;"></span> Booked</span>
+          <span><span style="display: inline-block; width: 10px; height: 10px; background: rgba(100, 116, 139, 0.2); border-radius: 2px;"></span> Booked</span>
         </div>
       </div>
 
@@ -503,20 +507,8 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- LIGHT FOOTER (HIGH-VISIBILITY TEXT & LINKS) -->
   <footer class="sangitam-footer-wrapper">
-    <div class="terrain-horizon-container">
-      <svg class="terrain-svg-path" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
-        <path d="M0,45 C280,95 560,10 880,80 C1140,130 1320,35 1440,65 L1440,120 L0,120 Z" fill="#6B0E1E"/>
-        <path d="M0,35 C260,85 540,5 860,70 C1120,120 1300,25 1440,55 L1440,75 C1300,45 1120,140 860,90 C540,25 260,105 0,55 Z" fill="#9E1B32"/>
-      </svg>
-      <div class="horizon-stamp-badge">
-        <span class="marathi-badge-text">DIGITAL</span>
-        <span class="marathi-badge-text" style="font-size: 0.88rem;">SANGITAM</span>
-        <span class="year-badge-text">Est. 1983</span>
-      </div>
-    </div>
-
     <div class="footer-body-content">
       <div class="footer-brand-col">
         <h3>SANGITAM TRAVELS</h3>
