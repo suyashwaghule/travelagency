@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sangitam Travels | High-Visibility Light Theme WebGL Travel Experience Since 1983</title>
-  <meta name="description" content="Founded in 1983 by Mr. Vinod Patil. Sangitam Travels is Maharashtra's premier private bus & parcel operator with 100+ luxury AC sleeper coaches, live GPS tracking, and parcel services.">
+  <title>Sangitam Travels | Premier AC Sleeper Bus & Express Logistics Since 1983</title>
+  <meta name="description" content="Sangitam Travels - Founded in 1983 by Mr. Vinod Patil. Maharashtra's trusted luxury AC Sleeper bus operator with daily express routes & cargo parcel services.">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
@@ -14,554 +14,857 @@
 </head>
 <body>
 
-  <!-- FULL-SCREEN THREE.JS WEBGL 3D CANVAS STAGE -->
-  <div id="webgl-canvas-container"></div>
-
-  <!-- FLOATING JOURNEY PROGRESS BAR -->
-  <div class="journey-progress-bar-container">
-    <div class="journey-progress-fill">
-      <div class="journey-progress-bus-icon">
-        <i class="fas fa-bus"></i>
-      </div>
-    </div>
-  </div>
-
-  <!-- MOBILE-FIRST FLOATING GLASSMORPHISM NAVIGATION BAR -->
-  <div class="modern-floating-nav-wrapper">
-    <nav class="modern-nav-capsule">
+  <!-- UNIQUE FLOATING GLASSMORPHISM CAPSULE NAVIGATION BAR -->
+  <header class="site-header">
+    <div class="nav-inner">
       
-      <a href="index.html" class="modern-brand-link">
-        <div class="modern-brand-badge">
-          <img src="images/anniversary_seal.png" alt="Sangitam Travels Crest" style="width: 28px; height: 28px; object-fit: contain;">
-        </div>
+      <a href="index.html" class="brand-link">
+        <div class="brand-logo-mark">S</div>
         <div>
-          <div class="modern-brand-name">SANGITAM</div>
-          <div class="modern-brand-tag">EST. 1983 • TRAVELS</div>
+          <div class="brand-text-name">SANGITAM</div>
+          <div class="brand-text-sub">EST. 1983 • TRAVELS</div>
         </div>
       </a>
 
-      <!-- Mobile Hamburger Toggle Button -->
-      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+      <button id="mobileMenuToggle" class="mobile-toggle" aria-label="Toggle navigation menu">
         <i class="fas fa-bars"></i>
       </button>
 
-      <!-- Navigation Links (Desktop Row / Mobile Slide Drawer) -->
-      <ul id="modernNavMenu" class="modern-nav-menu">
-        <li class="modern-nav-item"><a href="index.html" class="active">Home</a></li>
-        <li class="modern-nav-item"><a href="about.html">About Us</a></li>
-        <li class="modern-nav-item"><a href="services.html">Services</a></li>
-        <li class="modern-nav-item"><a href="fleet.html">Fleet & Seats</a></li>
-        <li class="modern-nav-item"><a href="routes.html">Routes</a></li>
-        <li class="modern-nav-item"><a href="contact.html">Contact</a></li>
+      <ul id="mainNavMenu" class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="routes.html" class="nav-link">Routes</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
 
-      <div class="modern-nav-action-group">
-        <div class="modern-phone-pill">
-          <i class="fas fa-phone-alt"></i> +91 (257) 222-1983
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="nav-contact-pill">
+          <i class="fas fa-phone-alt" style="color: var(--clr-primary);"></i> +91 (257) 222-1983
         </div>
-        <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Bus Ticket">
+        <button class="btn btn-primary btn-trigger-modal" data-route="Jalgaon → Pune">
           <i class="fas fa-ticket-alt"></i> Book Ticket
         </button>
       </div>
 
-    </nav>
-  </div>
+    </div>
+  </header>
 
-  <!-- CINEMATIC SPLIT HERO SECTION -->
-  <section id="hero" class="hero-modern-split-section">
-    <div class="hero-modern-grid">
+  <!-- CREATIVE EDITORIAL FULL-VIEWPORT HERO STAGE -->
+  <section class="section" style="min-height: calc(100vh - 110px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px 0 40px; position: relative;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
       
-      <!-- Left Column: Value Proposition -->
-      <div>
-        <div class="badge-modern-glow">
-          <i class="fas fa-star" style="color: var(--clr-wax-red);"></i> ESTABLISHED 1983 • 40+ YEARS OF EXCELLENCE
-        </div>
-
-        <h1 class="hero-modern-headline">
-          Redefining <span class="highlight-crimson">Premium Bus Travel</span> Across Maharashtra
-        </h1>
-
-        <p class="hero-modern-lead">
-          Experience unmatched comfort in our modern fleet of 100+ AC Sleeper coaches. Real-time GPS tracking, express cargo parcel delivery, and 24/7 dedicated customer support.
-        </p>
-
-        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Bus Ticket">
-            <i class="fas fa-ticket-alt"></i> Book Tickets Now
-          </button>
-          <a href="fleet.html" class="btn-secondary-gold">
-            <i class="fas fa-eye"></i> View Fleet & Seats
-          </a>
-        </div>
-
-        <div class="hero-trust-metrics">
-          <div class="hero-metric-pill">
-            <i class="fas fa-bus-alt"></i> 100+ Luxury AC Sleepers
-          </div>
-          <div class="hero-metric-pill">
-            <i class="fas fa-satellite-dish"></i> Live GPS Tracking
-          </div>
-          <div class="hero-metric-pill">
-            <i class="fas fa-shipping-fast"></i> Express Cargo Logistics
-          </div>
-        </div>
+      <!-- Live Status Pill & Heritage Badge -->
+      <div style="display: inline-flex; align-items: center; gap: 12px; padding: 8px 22px; background: rgba(254, 250, 243, 0.96); backdrop-filter: blur(12px); border: 2px solid var(--clr-dark); border-radius: 99px; box-shadow: 4px 4px 0px var(--clr-dark); margin-bottom: 24px;">
+        <span class="live-dot-pulse"></span>
+        <span style="font-size: 0.82rem; font-weight: 800; color: var(--clr-dark); letter-spacing: 0.08em; text-transform: uppercase;">
+          LIVE NETWORK • EST. 1983 • 40+ YEARS OF EXCELLENCE
+        </span>
       </div>
 
-      <!-- Right Column: Interactive Multi-Tool Desk -->
-      <div class="hero-glass-desk-card">
-        <div style="margin-bottom: 16px;">
-          <h3 class="desk-card-title"><i class="fas fa-compass" style="color: var(--clr-wax-red);"></i> Travel & Cargo Lounge</h3>
-          <p style="font-size: 0.88rem; color: var(--clr-ink-sepia);">Search seats, track live GPS location, or trace parcel status.</p>
-        </div>
+      <!-- Main Editorial Master Headline -->
+      <h1 style="font-size: clamp(2.8rem, 5.8vw, 5rem); font-weight: 800; color: #16181B; line-height: 1.05; letter-spacing: -0.03em; max-width: 1040px; margin: 0 auto 20px;">
+        Journeys Through <br>
+        <span class="font-serif highlight-crimson" style="font-style: italic;">Time, Comfort & Geography</span>
+      </h1>
 
-        <!-- MULTI-TOOL DESK WIDGET -->
-        <div class="sangitam-multitool-card" style="padding: 0; background: transparent !important; border: none !important; box-shadow: none !important;">
-          <div class="multitool-tabs-header">
-            <button class="multitool-tab-btn active" data-tab="tabBooking">
-              <i class="fas fa-ticket-alt"></i> Book Tickets
-            </button>
-            <button class="multitool-tab-btn" data-tab="tabTrackBus">
-              <i class="fas fa-map-marker-alt"></i> Live GPS
-            </button>
-            <button class="multitool-tab-btn" data-tab="tabTrackParcel">
-              <i class="fas fa-box-open"></i> Track Cargo
-            </button>
-          </div>
-
-          <!-- TAB 1: BOOKING -->
-          <div id="tabBooking" class="multitool-panel">
-            <form id="sangitamBookingForm" class="multitool-form-grid">
-              <div class="form-sangitam-group">
-                <label for="bookFrom"><i class="fas fa-bus-departure"></i> Origin City</label>
-                <select id="bookFrom" class="form-sangitam-control" required>
-                  <option value="">Select From City</option>
-                  <option value="Jalgaon" selected>Jalgaon</option>
-                  <option value="Pune">Pune</option>
-                  <option value="Aurangabad (Sambhajinagar)">Aurangabad (Sambhajinagar)</option>
-                  <option value="Nashik">Nashik</option>
-                  <option value="Bhusawal">Bhusawal</option>
-                  <option value="Dhule">Dhule</option>
-                  <option value="Nagpur">Nagpur</option>
-                  <option value="Mumbai">Mumbai Region</option>
-                </select>
-              </div>
-
-              <div class="form-sangitam-group">
-                <label for="bookTo"><i class="fas fa-bus-arrival"></i> Destination City</label>
-                <select id="bookTo" class="form-sangitam-control" required>
-                  <option value="">Select Destination</option>
-                  <option value="Pune" selected>Pune</option>
-                  <option value="Jalgaon">Jalgaon</option>
-                  <option value="Nashik">Nashik</option>
-                  <option value="Aurangabad (Sambhajinagar)">Aurangabad (Sambhajinagar)</option>
-                  <option value="Solapur">Solapur</option>
-                  <option value="Kolhapur">Kolhapur</option>
-                  <option value="Latur">Latur</option>
-                  <option value="Amravati">Amravati</option>
-                </select>
-              </div>
-
-              <div class="form-sangitam-group">
-                <label for="bookDate"><i class="fas fa-calendar-alt"></i> Journey Date</label>
-                <input type="date" id="bookDate" class="form-sangitam-control" required>
-              </div>
-
-              <div class="form-sangitam-group">
-                <button type="submit" class="btn-primary-sangitam" style="width: 100%;">
-                  <i class="fas fa-search"></i> Search Buses
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <!-- TAB 2: GPS -->
-          <div id="tabTrackBus" class="multitool-panel" style="display: none;">
-            <form id="busTrackForm" style="display: flex; flex-direction: column; gap: 12px;">
-              <div>
-                <label style="font-family: var(--font-sub-serif); font-size: 0.72rem; font-weight: bold; color: var(--clr-wax-red); text-transform: uppercase;">
-                  <i class="fas fa-route"></i> Ticket PNR Number
-                </label>
-                <input type="text" id="trackPnrInput" class="form-sangitam-control" style="width: 100%; margin-top: 4px;" placeholder="e.g., SNG-1983-9842" required>
-              </div>
-              <button type="submit" class="btn-primary-sangitam" style="width: 100%;">
-                <i class="fas fa-crosshairs"></i> Track Bus Live GPS
-              </button>
-            </form>
-          </div>
-
-          <!-- TAB 3: CARGO -->
-          <div id="tabTrackParcel" class="multitool-panel" style="display: none;">
-            <form id="parcelTrackForm" style="display: flex; flex-direction: column; gap: 12px;">
-              <div>
-                <label style="font-family: var(--font-sub-serif); font-size: 0.72rem; font-weight: bold; color: var(--clr-wax-red); text-transform: uppercase;">
-                  <i class="fas fa-box-open"></i> Parcel Waybill / LR Number
-                </label>
-                <input type="text" id="trackLrInput" class="form-sangitam-control" style="width: 100%; margin-top: 4px;" placeholder="e.g., SNG-LR-5582" required>
-              </div>
-              <button type="submit" class="btn-primary-sangitam" style="width: 100%;">
-                <i class="fas fa-search-location"></i> Track Parcel Shipment
-              </button>
-            </form>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- STATS BANNER -->
-  <section class="sangitam-stats-banner">
-    <div class="sangitam-stats-grid">
-      <div class="stat-box-sangitam">
-        <div class="stat-number-sangitam">1983</div>
-        <div class="stat-label-sangitam">Established Year</div>
-      </div>
-      <div class="stat-box-sangitam">
-        <div class="stat-number-sangitam">100+</div>
-        <div class="stat-label-sangitam">Company-Owned Buses</div>
-      </div>
-      <div class="stat-box-sangitam">
-        <div class="stat-number-sangitam">40+</div>
-        <div class="stat-label-sangitam">Years of Legacy</div>
-      </div>
-      <div class="stat-box-sangitam">
-        <div class="stat-number-sangitam">500K+</div>
-        <div class="stat-label-sangitam">Passengers Annually</div>
-      </div>
-      <div class="stat-box-sangitam">
-        <div class="stat-number-sangitam">7M+</div>
-        <div class="stat-label-sangitam">Kilometers Covered</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CHAPTER I: THE 1983 HERITAGE TIMELINE -->
-  <section id="timeline1983" class="scrollytelling-chapter">
-    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-      <span class="editorial-tag">Chapter I — Four Decades of Legacy</span>
-      <h2 style="font-size: 2.4rem;">The Sangitam 1983 Story</h2>
-      <div class="gold-keyline"></div>
-      <p style="color: var(--clr-ink-sepia);">
-        From a single bus en route between Jalgaon and Pune to over 100+ company-owned luxury AC sleeper coaches across Maharashtra.
+      <p style="font-size: clamp(1.1rem, 1.8vw, 1.3rem); color: #2B2F33; font-weight: 500; max-width: 760px; margin: 0 auto 32px; line-height: 1.6;">
+        Maharashtra's iconic luxury AC Sleeper bus operator & express parcel cargo network connecting Jalgaon, Pune, Mumbai, Nashik, Surat & Dhule.
       </p>
-    </div>
 
-    <div class="timeline-interactive-container">
-      <div class="timeline-spine-line"></div>
-
-      <!-- Node 1 -->
-      <div class="timeline-node-item">
-        <div class="timeline-dot-pin"></div>
-        <div class="timeline-card-box">
-          <div class="timeline-year-tag">1983 — First Journey</div>
-          <h4 style="font-size: 1.2rem; margin-bottom: 6px;">Founded by Mr. Vinod Patil</h4>
-          <p style="color: var(--clr-ink-sepia); font-size: 0.95rem;">
-            Sangitam Travels was established with a single bus operating between Jalgaon and Pune. Built on personal commitment, punctuality, and passenger safety.
-          </p>
-        </div>
+      <!-- Primary Action Buttons -->
+      <div style="display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; margin-bottom: 24px;">
+        <button class="btn btn-primary btn-trigger-modal" data-route="Jalgaon → Pune" style="padding: 16px 32px; font-size: 1.05rem; box-shadow: 0 6px 20px rgba(200, 56, 42, 0.35);">
+          <i class="fas fa-ticket-alt"></i> Reserve Sleeper Berth Online
+        </button>
+        <a href="routes.html" class="btn btn-secondary" style="padding: 16px 28px; font-size: 1.05rem;">
+          <i class="fas fa-route"></i> Explore Daily Timetables
+        </a>
       </div>
 
-      <!-- Node 2 -->
-      <div class="timeline-node-item node-right">
-        <div class="timeline-dot-pin"></div>
-        <div class="timeline-card-box">
-          <div class="timeline-year-tag">2005 — Fleet Expansion</div>
-          <h4 style="font-size: 1.2rem; margin-bottom: 6px;">Connecting Maharashtra Hubs</h4>
-          <p style="color: var(--clr-ink-sepia); font-size: 0.95rem;">
-            Expanded inter-city routes to Nashik, Sambhajinagar (Aurangabad), Bhusawal, Dhule, and Mumbai, establishing regional booking hubs.
-          </p>
-        </div>
-      </div>
-
-      <!-- Node 3 -->
-      <div class="timeline-node-item">
-        <div class="timeline-dot-pin"></div>
-        <div class="timeline-card-box">
-          <div class="timeline-year-tag">2018 — Luxury Era</div>
-          <h4 style="font-size: 1.2rem; margin-bottom: 6px;">Induction of Mercedes-Benz & Volvo</h4>
-          <p style="color: var(--clr-ink-sepia); font-size: 0.95rem;">
-            Modernized the fleet under Director Dhanvijay Patil, introducing air-suspension sleeper berths and live GPS tracking for passenger safety.
-          </p>
-        </div>
-      </div>
-
-      <!-- Node 4 -->
-      <div class="timeline-node-item node-right">
-        <div class="timeline-dot-pin"></div>
-        <div class="timeline-card-box">
-          <div class="timeline-year-tag">2026 — Digital Leader</div>
-          <h4 style="font-size: 1.2rem; margin-bottom: 6px;">100+ Buses & Express Cargo</h4>
-          <p style="color: var(--clr-ink-sepia); font-size: 0.95rem;">
-            Spearheaded by Director Dharmasen Patil, offering seamless online seat booking, mobile app tracking, and express cargo parcel logistics across Maharashtra.
-          </p>
-        </div>
-      </div>
+      <!-- Animated Bouncing Scroll Indicator -->
+      <a href="#popularRoutes" class="scroll-indicator">
+        Explore Routes & Services <i class="fas fa-chevron-down"></i>
+      </a>
 
     </div>
   </section>
 
-  <!-- CHAPTER II: INSIDE THE LUXURY SUITE (CLEAN HIGH-CONTRAST LIGHT STAGE) -->
-  <section id="cabinExplorer" class="scrollytelling-chapter">
-    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-      <span class="editorial-tag">Chapter II — Luxury on Wheels</span>
-      <h2 style="font-size: 2.4rem;">Sleeper Suite Comforts</h2>
-      <div class="gold-keyline"></div>
-      <p style="color: var(--clr-ink-sepia);">
-        Inspect the ergonomic sleeper berths, air suspension cabin, and cockpit safety desk.
-      </p>
-    </div>
-
-    <div class="cabin-explorer-wrapper">
-      <div class="cabin-visual-stage" style="height: 380px; background: #FFFFFF; border-radius: 12px; overflow: hidden; position: relative; border: 1.5px solid rgba(139, 38, 62, 0.2);">
-        <img id="cabinStageImg" src="images/cabin_luxury.png" alt="Sangitam Sleeper Suite Cabin View" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-
-      <div class="cabin-controls-panel" style="padding: 24px;">
-        <div class="view-switcher-tabs" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
-          <button class="view-tab-btn active" data-view="upper">Upper Sleeper Suite</button>
-          <button class="view-tab-btn" data-view="lower">Lower Sleeper Suite</button>
-          <button class="view-tab-btn" data-view="cockpit">Scania Cockpit</button>
+  <!-- FEATURED WELCOME TO SANGITAM TRAVELS SECTION (UNIFIED SINGLE CARD LAYOUT) -->
+  <section id="welcomeSangitam" class="section" style="padding-top: 40px; padding-bottom: 60px;">
+    <div class="container">
+      <div class="welcome-unified-card">
+        
+        <!-- Left Column: Integrated Bus Fleet Image with Badge -->
+        <div class="welcome-single-img">
+          <div class="welcome-img-badge">
+            <i class="fas fa-shield-alt" style="color: var(--clr-primary);"></i> Official Express Fleet
+          </div>
+          <img src="images/welcome_buses.png" alt="Sangitam Travels Luxury AC Sleeper Bus Fleet" loading="lazy">
         </div>
 
-        <h3 id="cabinStageTitle" style="font-size: 1.5rem; margin-bottom: 8px;">Upper Sleeper Berth Suite</h3>
-        <p id="cabinStageDesc" style="color: var(--clr-ink-sepia); font-size: 0.98rem; line-height: 1.65; margin-bottom: 20px;">
-          Ergonomic plush sleeper berth equipped with personal reading light, dual USB charging ports, privacy curtains, and individual AC vents.
-        </p>
+        <!-- Right Column: Integrated Content Column -->
+        <div class="welcome-single-content">
+          
+          <div style="margin-bottom: 8px;">
+            <span class="section-tag" style="background: var(--clr-primary-light); color: var(--clr-primary); border: 1px solid rgba(200, 56, 42, 0.25);">
+              <i class="fas fa-award"></i> Established 1983 • 40+ Years Legacy
+            </span>
+          </div>
 
-        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-          <span style="background: var(--clr-bg-warm-ivory); border: 1px solid var(--clr-wax-red); padding: 5px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: bold; color: var(--clr-ink-dark);"><i class="fas fa-bed" style="color: var(--clr-wax-red);"></i> AC Sleeper</span>
-          <span style="background: var(--clr-bg-warm-ivory); border: 1px solid var(--clr-wax-red); padding: 5px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: bold; color: var(--clr-ink-dark);"><i class="fas fa-wifi" style="color: var(--clr-wax-red);"></i> Onboard Wi-Fi</span>
-          <span style="background: var(--clr-bg-warm-ivory); border: 1px solid var(--clr-wax-red); padding: 5px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: bold; color: var(--clr-ink-dark);"><i class="fas fa-satellite-dish" style="color: var(--clr-wax-red);"></i> GPS Radar</span>
+          <h2 class="welcome-heading">
+            Welcome To <br>
+            <span class="font-serif highlight-crimson" style="font-style: italic;">Sangitam Travels</span>
+          </h2>
+          
+          <h3 class="welcome-sub-heading">Sangitam Travels Is Well known Company of India.</h3>
+
+          <p class="welcome-body-text">
+            Established in 1983, Sangitam Travels began its journey with just one bus service operating between Jalgaon and Pune. Sangitam now proudly operates a fleet of over 100 company-owned buses, making Sangitam one of the largest private bus operators in Maharashtra. Covers more than 80% of the state, along with key routes connecting neighbouring state capital cities.<br><br>
+            For over four decades, Sangitam Travels remained committed to serving the evolving needs of travellers across India, with an unwavering focus on Quality, Comfort, Safety, and Reliability.
+          </p>
+
+          <!-- Key Metrics Ribbon -->
+          <div class="welcome-stats-ribbon">
+            <div class="welcome-stat-pill">
+              <i class="fas fa-bus"></i> 100+ Buses Fleet
+            </div>
+            <div class="welcome-stat-pill">
+              <i class="fas fa-map-marked-alt"></i> 80%+ MH Coverage
+            </div>
+            <div class="welcome-stat-pill">
+              <i class="fas fa-history"></i> 40+ Years Excellence
+            </div>
+          </div>
+
+          <div>
+            <a href="about.html" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem; align-self: flex-start;">
+              <i class="fas fa-book-open"></i> Read More About Sangitam
+            </a>
+          </div>
+
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CHAPTER III: TOPOLOGICAL ROUTE MAP -->
-  <section id="routeMap" class="scrollytelling-chapter">
-    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-      <span class="editorial-tag">Chapter III — Connecting Maharashtra</span>
-      <h2 style="font-size: 2.4rem;">Interactive Route Network</h2>
-      <div class="gold-keyline"></div>
-      <p style="color: var(--clr-ink-sepia);">
-        Click on any key terminal node below to inspect route frequencies, headquarters hubs, and live connection details.
-      </p>
-    </div>
-
-    <div class="map-interactive-container">
-      <div class="svg-map-stage">
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; height: 100%; min-height: 220px; padding: 14px;">
-          <button class="city-node-btn active" data-city="jalgaon"><i class="fas fa-map-pin"></i> Jalgaon (HQ)</button>
-          <button class="city-node-btn" data-city="pune"><i class="fas fa-map-pin"></i> Pune Hub</button>
-          <button class="city-node-btn" data-city="nashik"><i class="fas fa-map-pin"></i> Nashik</button>
-          <button class="city-node-btn" data-city="sambhajinagar"><i class="fas fa-map-pin"></i> Sambhajinagar</button>
-          <button class="city-node-btn" data-city="mumbai"><i class="fas fa-map-pin"></i> Mumbai Region</button>
-        </div>
+  <!-- POPULAR ROUTES SECTION -->
+  <section id="popularRoutes" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Daily Timetable</span>
+        <h2 class="section-title">Popular Routes Across Maharashtra</h2>
+        <p class="section-lead">Punctual departures, comfortable AC sleeper berths, and convenient pickup points.</p>
       </div>
 
-      <div style="display: flex; flex-direction: column; justify-content: center;">
-        <span class="editorial-tag" style="font-size: 0.82rem;">Route Terminal Inspection</span>
-        <h3 id="mapRouteTitle" style="font-size: 1.5rem; margin: 6px 0;">Jalgaon (Sangitam Head Office)</h3>
-        <p id="mapRouteMeta" style="color: var(--clr-wax-red); font-weight: bold; font-size: 0.9rem; margin-bottom: 12px;">
-          Origin Hub • 8 Daily Services to Pune & Mumbai
-        </p>
-        <p id="mapRouteDesc" style="color: var(--clr-ink-sepia); font-size: 0.98rem; line-height: 1.65; margin-bottom: 20px;">
-          Sangitam Travels was born in Jalgaon in 1983. Operating daily premium AC sleeper coaches from Lewa Boarding Complex to Pune, Mumbai, Nashik, and Surat.
-        </p>
-        <button class="btn-primary-sangitam btn-trigger-modal" data-title="Book Route Service">
-          <i class="fas fa-ticket-alt"></i> Reserve Seat on Route
+      <div class="card-grid-3">
+        
+        <!-- Route Card 1 -->
+        <div class="route-card">
+          <div class="card-img-container">
+            <img src="images/dest_ajanta.png" alt="Pune to Jalgaon Bus Service" loading="lazy">
+            <div class="card-img-badge">Daily Express</div>
+          </div>
+          <div class="route-cities">
+            <div>
+              <div class="city-node">Pune</div>
+              <div class="city-sub">Dep: 09:30 PM</div>
+            </div>
+            <div class="route-path-line">
+              <div class="path-dashed">
+                <div class="path-bus-icon"><i class="fas fa-bus"></i></div>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--clr-muted); margin-top: 4px;">415 km • 8h 30m</span>
+            </div>
+            <div style="text-align: right;">
+              <div class="city-node">Jalgaon</div>
+              <div class="city-sub">Arr: 06:00 AM</div>
+            </div>
+          </div>
+          <div class="route-meta-row">
+            <div class="route-fare">₹850 <span>/ berth</span></div>
+            <button class="btn btn-secondary btn-sm btn-trigger-modal" data-route="Pune → Jalgaon">Select Berth</button>
+          </div>
+        </div>
+
+        <!-- Route Card 2 -->
+        <div class="route-card">
+          <div class="card-img-container">
+            <img src="images/dest_india.png" alt="Jalgaon to Pune Bus Service" loading="lazy">
+            <div class="card-img-badge">Volvo AC Sleeper</div>
+          </div>
+          <div class="route-cities">
+            <div>
+              <div class="city-node">Jalgaon</div>
+              <div class="city-sub">Dep: 09:30 PM</div>
+            </div>
+            <div class="route-path-line">
+              <div class="path-dashed">
+                <div class="path-bus-icon"><i class="fas fa-bus"></i></div>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--clr-muted); margin-top: 4px;">415 km • 8h 30m</span>
+            </div>
+            <div style="text-align: right;">
+              <div class="city-node">Pune</div>
+              <div class="city-sub">Arr: 06:00 AM</div>
+            </div>
+          </div>
+          <div class="route-meta-row">
+            <div class="route-fare">₹850 <span>/ berth</span></div>
+            <button class="btn btn-secondary btn-sm btn-trigger-modal" data-route="Jalgaon → Pune">Select Berth</button>
+          </div>
+        </div>
+
+        <!-- Route Card 3 -->
+        <div class="route-card">
+          <div class="card-img-container">
+            <img src="images/dest_konkan.png" alt="Pune to Nagpur Bus Service" loading="lazy">
+            <div class="card-img-badge">Scania Executive</div>
+          </div>
+          <div class="route-cities">
+            <div>
+              <div class="city-node">Pune</div>
+              <div class="city-sub">Dep: 06:30 PM</div>
+            </div>
+            <div class="route-path-line">
+              <div class="path-dashed">
+                <div class="path-bus-icon"><i class="fas fa-bus"></i></div>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--clr-muted); margin-top: 4px;">710 km • 13h 00m</span>
+            </div>
+            <div style="text-align: right;">
+              <div class="city-node">Nagpur</div>
+              <div class="city-sub">Arr: 07:30 AM</div>
+            </div>
+          </div>
+          <div class="route-meta-row">
+            <div class="route-fare">₹1,450 <span>/ berth</span></div>
+            <button class="btn btn-secondary btn-sm btn-trigger-modal" data-route="Pune → Nagpur">Select Berth</button>
+          </div>
+        </div>
+
+        <!-- Route Card 4 -->
+        <div class="route-card">
+          <div class="card-img-container">
+            <img src="images/dest_swiss.png" alt="Kolhapur to Nagpur Bus Service" loading="lazy">
+            <div class="card-img-badge">Scania Executive</div>
+          </div>
+          <div class="route-cities">
+            <div>
+              <div class="city-node">Kolhapur</div>
+              <div class="city-sub">Dep: 04:00 PM</div>
+            </div>
+            <div class="route-path-line">
+              <div class="path-dashed">
+                <div class="path-bus-icon"><i class="fas fa-bus"></i></div>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--clr-muted); margin-top: 4px;">830 km • 16h 00m</span>
+            </div>
+            <div style="text-align: right;">
+              <div class="city-node">Nagpur</div>
+              <div class="city-sub">Arr: 08:00 AM</div>
+            </div>
+          </div>
+          <div class="route-meta-row">
+            <div class="route-fare">₹1,600 <span>/ berth</span></div>
+            <button class="btn btn-secondary btn-sm btn-trigger-modal" data-route="Kolhapur → Nagpur">Select Berth</button>
+          </div>
+        </div>
+
+        <!-- Route Card 5 -->
+        <div class="route-card">
+          <div class="card-img-container">
+            <img src="images/dest_raigad.png" alt="Bhusawal to Pune Bus Service" loading="lazy">
+            <div class="card-img-badge">Multi-Axle</div>
+          </div>
+          <div class="route-cities">
+            <div>
+              <div class="city-node">Bhusawal</div>
+              <div class="city-sub">Dep: 09:00 PM</div>
+            </div>
+            <div class="route-path-line">
+              <div class="path-dashed">
+                <div class="path-bus-icon"><i class="fas fa-bus"></i></div>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--clr-muted); margin-top: 4px;">440 km • 8h 45m</span>
+            </div>
+            <div style="text-align: right;">
+              <div class="city-node">Pune</div>
+              <div class="city-sub">Arr: 05:45 AM</div>
+            </div>
+          </div>
+          <div class="route-meta-row">
+            <div class="route-fare">₹880 <span>/ berth</span></div>
+            <button class="btn btn-secondary btn-sm btn-trigger-modal" data-route="Bhusawal → Pune">Select Berth</button>
+          </div>
+        </div>
+
+        <!-- Route Card 6 -->
+        <div class="route-card">
+          <div class="card-img-container">
+            <img src="images/dest_japan.png" alt="Aurangabad to Pune Bus Service" loading="lazy">
+            <div class="card-img-badge">Executive Sleeper</div>
+          </div>
+          <div class="route-cities">
+            <div>
+              <div class="city-node">Aurangabad</div>
+              <div class="city-sub">Dep: 11:00 PM</div>
+            </div>
+            <div class="route-path-line">
+              <div class="path-dashed">
+                <div class="path-bus-icon"><i class="fas fa-bus"></i></div>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--clr-muted); margin-top: 4px;">235 km • 6h 30m</span>
+            </div>
+            <div style="text-align: right;">
+              <div class="city-node">Pune</div>
+              <div class="city-sub">Arr: 05:30 AM</div>
+            </div>
+          </div>
+          <div class="route-meta-row">
+            <div class="route-fare">₹750 <span>/ berth</span></div>
+            <button class="btn btn-secondary btn-sm btn-trigger-modal" data-route="Aurangabad → Pune">Select Berth</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHENTIC & INTERACTIVE HERITAGE TIMELINE -->
+  <section id="heritageTimeline" class="section" style="position: relative;">
+    <div class="container">
+      
+      <div class="section-header" style="background: transparent; border: 2px solid var(--clr-dark); border-radius: var(--radius-lg); padding: 36px 40px; box-shadow: 8px 8px 0px var(--clr-dark); margin-bottom: 40px;">
+        <span class="section-tag">Our Legacy</span>
+        <h2 class="section-title" style="color: #16181B; margin-top: 8px;">40 Years of Excellence in Road Transport</h2>
+        <p class="section-lead" style="color: #2B2F33; font-weight: 600; max-width: 640px; margin: 0 auto;">Click on any milestone year below to explore key historic moments in Sangitam Travels' four-decade journey across Maharashtra.</p>
+      </div>
+
+      <!-- Interactive Year Navigation Bar -->
+      <div class="timeline-year-nav">
+        <button class="timeline-nav-pill active" data-target="1983">
+          <i class="fas fa-flag"></i> 1983 • Founding
+        </button>
+        <button class="timeline-nav-pill" data-target="1998">
+          <i class="fas fa-boxes"></i> 1998 • Cargo Launch
+        </button>
+        <button class="timeline-nav-pill" data-target="2012">
+          <i class="fas fa-bus"></i> 2012 • Volvo Sleeper
+        </button>
+        <button class="timeline-nav-pill" data-target="2026">
+          <i class="fas fa-satellite"></i> 2026 • 100+ Fleet & GPS
         </button>
       </div>
+
+      <!-- Interactive Timeline Container -->
+      <div class="timeline-container">
+        
+        <!-- Milestone 1983 -->
+        <div class="timeline-item left active-highlight" id="timeline-1983" data-year="1983">
+          <div class="timeline-badge"><i class="fas fa-bus"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-year">1983 • FOUNDING YEAR</div>
+            <div class="timeline-title" style="color: #16181B;">The First Bus Journey</div>
+            <p style="font-size: 0.92rem; color: #2B2F33; font-weight: 500;">Founder Mr. Vinod Patil launched Sangitam Travels in Jalgaon with just a single bus operating between Jalgaon and Pune, filling a crucial rural connectivity gap.</p>
+            <div class="timeline-stat-chip"><i class="fas fa-star"></i> 1 Bus Service • Jalgaon ➔ Pune</div>
+            <div class="timeline-expand-btn">View Era Details <i class="fas fa-chevron-down"></i></div>
+            <div class="timeline-detail-drawer">
+              What started as a modest music house ("Sangitam") soon grew into Maharashtra's lifeline for students, working professionals, and families seeking reliable intercity transport.
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 1998 -->
+        <div class="timeline-item right" id="timeline-1998" data-year="1998">
+          <div class="timeline-badge"><i class="fas fa-truck-moving"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-year">1998 • EXPANSION</div>
+            <div class="timeline-title" style="color: #16181B;">Express Parcel Cargo Network</div>
+            <p style="font-size: 0.92rem; color: #2B2F33; font-weight: 500;">Introduced daily same-night parcel logistics using dedicated under-deck storage across Jalgaon, Dhule, Pune, and Mumbai hubs.</p>
+            <div class="timeline-stat-chip"><i class="fas fa-shipping-fast"></i> Same-Night Express Cargo</div>
+            <div class="timeline-expand-btn">View Era Details <i class="fas fa-chevron-down"></i></div>
+            <div class="timeline-detail-drawer">
+              Sangitam Express Logistics became North Maharashtra's most trusted express parcel carrier, helping traders, businesses, and individuals ship goods with guaranteed next-morning arrival.
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 2012 -->
+        <div class="timeline-item left" id="timeline-2012" data-year="2012">
+          <div class="timeline-badge"><i class="fas fa-snowflake"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2012 • FLEET UPGRADE</div>
+            <div class="timeline-title" style="color: #16181B;">Volvo Multi-Axle AC Sleeper</div>
+            <p style="font-size: 0.92rem; color: #2B2F33; font-weight: 500;">Pioneered luxury Multi-Axle AC Sleeper coaches with ergonomic memory foam berths, individual reading lights, charging ports, and sanitized bedding.</p>
+            <div class="timeline-stat-chip"><i class="fas fa-couch"></i> 2+1 Luxury AC Sleeper</div>
+            <div class="timeline-expand-btn">View Era Details <i class="fas fa-chevron-down"></i></div>
+            <div class="timeline-detail-drawer">
+              Set new benchmarks for luxury highway passenger transport across Maharashtra, introducing quiet air-suspension rides and hotel-grade sleeper comfort.
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 2026 -->
+        <div class="timeline-item right" id="timeline-2026" data-year="2026">
+          <div class="timeline-badge"><i class="fas fa-wifi"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2026 • MODERN ERA</div>
+            <div class="timeline-title" style="color: #16181B;">100+ Fleet & Smart Telematics</div>
+            <p style="font-size: 0.92rem; color: #2B2F33; font-weight: 500;">Now operating 100+ company-owned buses covering 80%+ of Maharashtra with live GPS telemetry, automated SMS notifications, and online ticket booking.</p>
+            <div class="timeline-stat-chip"><i class="fas fa-globe"></i> 100+ Buses • 80%+ State Coverage</div>
+            <div class="timeline-expand-btn">View Era Details <i class="fas fa-chevron-down"></i></div>
+            <div class="timeline-detail-drawer">
+              Equipped with speed governors, dual-driver safety protocols, real-time bus tracking for passenger families, and centralized 24/7 customer support.
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- CHAPTER IV: LIVE INTERACTIVE SEAT MAP LOUNGE -->
-  <section id="seatLounge" class="scrollytelling-chapter">
-    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-      <span class="editorial-tag">Chapter IV — Live Booking Lounge</span>
-      <h2 style="font-size: 2.4rem;">Sleeper Seat Selector</h2>
-      <div class="gold-keyline"></div>
-      <p style="color: var(--clr-ink-sepia);">
-        Select your preferred upper or lower sleeper berth directly on the interactive cabin map below.
-      </p>
-    </div>
-
-    <div class="seatmap-modal-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid rgba(139, 38, 62, 0.15); padding-bottom: 14px;">
+  <!-- EXPRESS LOGISTICS & PARCEL TRACKING SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="card-grid-2" style="align-items: center;">
+        
         <div>
-          <h4 style="font-size: 1.2rem; color: var(--clr-ink-dark);">AC Sleeper Coach (2+1 Layout)</h4>
-          <p style="color: var(--clr-ink-sepia); font-size: 0.88rem;">Jalgaon HQ ➔ Pune Office</p>
+          <span class="section-tag">Express Cargo</span>
+          <h2 class="section-title">Sangitam Cargo & Logistics</h2>
+          <p style="color: var(--clr-muted); font-size: 1.05rem; margin-bottom: 24px;">
+            Fast, secure, and reliable parcel delivery across North Maharashtra, Pune, Mumbai, Nashik, and Gujarat. We carry goods, commercial documents, and perishable packages with same-day destination arrival.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--clr-primary-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-weight: 700;"><i class="fas fa-bolt"></i></div>
+              <div style="font-weight: 600;">Same-Night Delivery via Express Buses</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--clr-primary-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-weight: 700;"><i class="fas fa-shield-alt"></i></div>
+              <div style="font-weight: 600;">Full Parcel Insurance & Proof of Delivery (POD)</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--clr-primary-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-weight: 700;"><i class="fas fa-boxes"></i></div>
+              <div style="font-weight: 600;">Dedicated Parcel Counters at All Major Terminals</div>
+            </div>
+          </div>
+
         </div>
-        <div style="display: flex; gap: 12px; font-size: 0.78rem; font-weight: bold;">
-          <span><span style="display: inline-block; width: 10px; height: 10px; background: #FFFFFF; border: 1px solid var(--clr-wax-red); border-radius: 2px;"></span> Available</span>
-          <span><span style="display: inline-block; width: 10px; height: 10px; background: var(--clr-wax-red); border-radius: 2px;"></span> Selected</span>
-          <span><span style="display: inline-block; width: 10px; height: 10px; background: rgba(100, 116, 139, 0.2); border-radius: 2px;"></span> Booked</span>
+
+        <!-- Track Parcel Card -->
+        <div style="background: transparent; border: 2px solid var(--clr-dark); border-radius: var(--radius-lg); padding: 36px; box-shadow: 8px 8px 0px var(--clr-dark);">
+          <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 12px;"><i class="fas fa-search-location" style="color: var(--clr-primary);"></i> Track Your Parcel</h3>
+          <p style="font-size: 0.9rem; color: var(--clr-muted); margin-bottom: 24px;">Enter your Waybill / LR number printed on your receipt to check live transit status.</p>
+          
+          <form id="parcelTrackingForm">
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label for="trackingWaybillInput">Waybill / LR Number</label>
+              <input type="text" id="trackingWaybillInput" class="form-control" placeholder="e.g. SNG-1983-99" required>
+            </div>
+            <button type="submit" class="btn btn-dark" style="width: 100%;">
+              <i class="fas fa-truck-moving"></i> Track Shipment
+            </button>
+          </form>
+
+          <div id="trackingResultBox" style="display: none;"></div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE TICKET & SEAT SELECTION MODAL -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-size: 1.4rem; font-weight: 800;" id="modalRouteTitle">Jalgaon → Pune</h3>
+          <p style="font-size: 0.85rem; color: var(--clr-muted);">Volvo Multi-Axle 2+1 AC Sleeper Coach</p>
+        </div>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
       </div>
 
-      <div class="seat-deck-container">
-        <!-- Lower Deck -->
-        <div class="deck-box">
-          <div class="deck-title"><i class="fas fa-layer-group"></i> Lower Deck Berths</div>
-          <div class="berth-grid">
-            <div class="berth-cell" data-seat="L1">L1 (₹950)</div>
-            <div class="berth-cell booked" data-seat="L2">L2 (Booked)</div>
-            <div class="berth-cell" data-seat="L3">L3 (₹950)</div>
-            <div class="berth-cell" data-seat="L4">L4 (₹950)</div>
-            <div class="berth-cell booked" data-seat="L5">L5 (Booked)</div>
-            <div class="berth-cell" data-seat="L6">L6 (₹950)</div>
+      <div class="seat-legend">
+        <div class="legend-item"><div class="legend-box legend-available"></div> Available</div>
+        <div class="legend-item"><div class="legend-box legend-selected"></div> Selected</div>
+        <div class="legend-item"><div class="legend-box legend-booked"></div> Booked</div>
+      </div>
+
+      <div class="seat-map-wrapper">
+        <div class="deck-container">
+          <div class="deck-title">Lower Deck Berths</div>
+          <div class="seat-grid">
+            <div class="seat-item" data-seat="L1">L1</div>
+            <div class="seat-item" data-seat="L2">L2</div>
+            <div class="seat-aisle"></div>
+            <div class="seat-item booked" data-seat="L3">L3</div>
+            <div class="seat-item" data-seat="L4">L4</div>
+            <div class="seat-item" data-seat="L5">L5</div>
+            <div class="seat-aisle"></div>
+            <div class="seat-item" data-seat="L6">L6</div>
           </div>
         </div>
 
-        <!-- Upper Deck -->
-        <div class="deck-box">
-          <div class="deck-title"><i class="fas fa-layer-group"></i> Upper Deck Berths</div>
-          <div class="berth-grid">
-            <div class="berth-cell" data-seat="U1">U1 (₹950)</div>
-            <div class="berth-cell" data-seat="U2">U2 (₹950)</div>
-            <div class="berth-cell booked" data-seat="U3">U3 (Booked)</div>
-            <div class="berth-cell" data-seat="U4">U4 (₹950)</div>
-            <div class="berth-cell" data-seat="U5">U5 (₹950)</div>
-            <div class="berth-cell" data-seat="U6">U6 (₹950)</div>
+        <div class="deck-container">
+          <div class="deck-title">Upper Deck Berths</div>
+          <div class="seat-grid">
+            <div class="seat-item" data-seat="U1">U1</div>
+            <div class="seat-item" data-seat="U2">U2</div>
+            <div class="seat-aisle"></div>
+            <div class="seat-item" data-seat="U3">U3</div>
+            <div class="seat-item booked" data-seat="U4">U4</div>
+            <div class="seat-item" data-seat="U5">U5</div>
+            <div class="seat-aisle"></div>
+            <div class="seat-item booked" data-seat="U9">U9</div>
           </div>
         </div>
       </div>
 
-      <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
-        <div id="selectedSeatSummary" style="font-family: var(--font-sub-serif); font-size: 0.95rem; font-weight: 700; color: var(--clr-wax-red);">
-          Click on any available berth to select your seat.
+      <div style="background: var(--bg-surface-alt); padding: 20px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <div style="font-size: 0.85rem; color: var(--clr-muted);">Selected Berths: <strong id="selectedSeatsDisplay" style="color: var(--clr-dark);">None</strong></div>
+          <div style="font-size: 1.3rem; font-weight: 800; color: var(--clr-primary);" id="totalPriceDisplay">₹0</div>
         </div>
-        <button id="btnBookSelectedSeat" class="btn-primary-sangitam" style="display: none;">
-          <i class="fas fa-check-circle"></i> Proceed to Book Selected Berth
+        <button id="btnConfirmBooking" class="btn btn-primary">
+          <i class="fas fa-check-circle"></i> Confirm Ticket Booking
         </button>
       </div>
-    </div>
-  </section>
 
-  <!-- LEADERSHIP SECTION -->
-  <section id="leadership" class="scrollytelling-chapter">
-    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-      <span class="editorial-tag">Visionaries Behind Sangitam</span>
-      <h2 style="font-size: 2.4rem;">Our Leadership</h2>
-      <div class="gold-keyline"></div>
-      <p style="color: var(--clr-ink-sepia);">
-        Guided by experienced leadership dedicated to safety, reliability, and continuous innovation.
-      </p>
-    </div>
-
-    <div class="leadership-grid">
-      <div class="leader-card">
-        <div class="leader-avatar-icon"><i class="fas fa-user-shield"></i></div>
-        <h3 class="leader-name">Mr. Vinod Patil</h3>
-        <span class="leader-role">Founder & Managing Director</span>
-        <p class="leader-bio">
-          Started Sangitam Travels in 1983 with a pioneering vision of providing dependable road transport, starting with the iconic Jalgaon–Pune route.
-        </p>
-      </div>
-
-      <div class="leader-card">
-        <div class="leader-avatar-icon"><i class="fas fa-chart-line"></i></div>
-        <h3 class="leader-name">Mr. Dhanvijay Patil</h3>
-        <span class="leader-role">Director — Operations & Fleet</span>
-        <p class="leader-bio">
-          Credited with modernizing fleet operations, inducting multi-axle luxury coaches, and enhancing passenger comfort standards.
-        </p>
-      </div>
-
-      <div class="leader-card">
-        <div class="leader-avatar-icon"><i class="fas fa-laptop-code"></i></div>
-        <h3 class="leader-name">Mr. Dharmasen Patil</h3>
-        <span class="leader-role">Director — Digital Services & Logistics</span>
-        <p class="leader-bio">
-          Spearheading digital transformation, online booking platforms, mobile app development, and cargo parcel network expansion.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- OFFICES & CONTACT SECTION -->
-  <section id="contact" class="scrollytelling-chapter">
-    <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-      <span class="editorial-tag">Get In Touch</span>
-      <h2 style="font-size: 2.4rem;">Head Office & Corporate Office</h2>
-      <div class="gold-keyline"></div>
-    </div>
-
-    <div class="offices-grid">
-      <div class="office-box">
-        <h3><i class="fas fa-building"></i> Head Office (Jalgaon)</h3>
-        <p style="font-size: 1rem; font-weight: 600; color: var(--clr-ink-dark); margin-bottom: 6px;">Sangitam Travels Head Office</p>
-        <p style="color: var(--clr-ink-sepia); line-height: 1.6; margin-bottom: 14px;">12, Lewa Boarding Complex, Near Rainbow Photo Studio, Jalgaon – 425001, Maharashtra.</p>
-        <p><i class="fas fa-phone-alt" style="color: var(--clr-wax-red);"></i> +91 (257) 222-1983 / 222-5582</p>
-        <p><i class="fas fa-envelope" style="color: var(--clr-wax-red);"></i> support@sangitamtravels.com</p>
-      </div>
-
-      <div class="office-box">
-        <h3><i class="fas fa-briefcase"></i> Corporate Office (Pune)</h3>
-        <p style="font-size: 1rem; font-weight: 600; color: var(--clr-ink-dark); margin-bottom: 6px;">Sangitam Travels Corporate Office</p>
-        <p style="color: var(--clr-ink-sepia); line-height: 1.6; margin-bottom: 14px;">Office No. 303, Garden Plaza, Five Gardens Road, Near Jagtap Dairy, Rahatani, Pimpri Chinchwad, Pune – 411027.</p>
-        <p><i class="fas fa-phone-alt" style="color: var(--clr-wax-red);"></i> +91 (20) 2727-1983 / 2727-8899</p>
-        <p><i class="fas fa-envelope" style="color: var(--clr-wax-red);"></i> pune@sangitamtravels.com</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- LIGHT FOOTER (HIGH-VISIBILITY TEXT & LINKS) -->
-  <footer class="sangitam-footer-wrapper">
-    <div class="footer-body-content">
-      <div class="footer-brand-col">
-        <h3>SANGITAM TRAVELS</h3>
-        <p>Serving Maharashtra with excellence since 1983. Delivering 40+ years of safe and trusted journeys.</p>
-      </div>
-      <div class="footer-links-col">
-        <h4>QUICK NAVIGATION</h4>
-        <ul class="footer-nav-list">
-          <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
-          <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
-          <li><a href="services.html"><i class="fas fa-angle-right"></i> Services</a></li>
-          <li><a href="fleet.html"><i class="fas fa-angle-right"></i> Fleet & Seats</a></li>
-          <li><a href="routes.html"><i class="fas fa-angle-right"></i> Routes</a></li>
-          <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact-col">
-        <h4>OFFICE HOURS & CONTACT</h4>
-        <div class="footer-contact-info">
-          <p><i class="far fa-clock"></i> <span>Mon - Sun: 24/7 Support Helpline</span></p>
-          <p><i class="fas fa-map-marker-alt"></i> <span>Jalgaon HQ: 12, Lewa Boarding Complex, Jalgaon – 425001</span></p>
-          <p><i class="fas fa-building"></i> <span>Pune Office: Office 303, Garden Plaza, Rahatani, Pune – 411027</span></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom-bar">
-      <div>© 2026 Sangitam Travels Ltd. All Rights Reserved.</div>
-    </div>
-  </footer>
-
-  <!-- MODAL DIALOG -->
-  <div id="sangitamModal" class="modal-sangitam-overlay">
-    <div class="modal-sangitam-card">
-      <button class="modal-close-cross">&times;</button>
-      <div style="text-align: center; margin-bottom: 20px;">
-        <div class="badge-modern-glow" style="margin-bottom: 10px;">Est. 1983</div>
-        <h3 id="modalTitle" style="font-size: 1.6rem; color: var(--clr-ink-dark);">Sangitam Support</h3>
-        <p id="modalSubtitle" style="font-size: 0.88rem; color: var(--clr-ink-sepia);">Enter your details below.</p>
-      </div>
-      <form id="modalContactForm">
-        <div style="margin-bottom: 12px;"><input type="text" class="form-sangitam-control" style="width: 100%;" required placeholder="Full Name *"></div>
-        <div style="margin-bottom: 12px;"><input type="tel" class="form-sangitam-control" style="width: 100%;" required placeholder="Mobile Number *"></div>
-        <button type="submit" class="btn-primary-sangitam" style="width: 100%;"><i class="fas fa-paper-plane"></i> Submit Request</button>
-      </form>
     </div>
   </div>
 
-  <!-- THREE.JS & GLTF LOADERS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="js/three-world.js"></script>
+  <!-- ══════ ILLUSTRATED LANDSCAPE SCENE FOOTER ══════ -->
+  <div class="footer-scene">
+
+    <!-- Richly Detailed SVG Landscape — theme-matched craft paper palette -->
+    <svg class="scene-illustration" viewBox="0 0 1440 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F3E6D3" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#E8D4B8" stop-opacity="0.65"/>
+          <stop offset="85%" stop-color="#D49A38" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#C8382A" stop-opacity="0.15"/>
+        </linearGradient>
+
+        <linearGradient id="headlightBeam" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#FFF2A8" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#FFF2A8" stop-opacity="0"/>
+        </linearGradient>
+
+        <linearGradient id="lampGlowGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFF2A8" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#FFF2A8" stop-opacity="0.02"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Sky Backdrop -->
+      <rect width="1440" height="220" fill="url(#skyGrad)"/>
+
+      <!-- Glowing Sun/Moon Disc -->
+      <circle cx="1240" cy="50" r="30" fill="#E2B52B" opacity="0.35"/>
+      <circle cx="1240" cy="50" r="42" fill="#D49A38" opacity="0.12"/>
+
+      <!-- Floating Clouds -->
+      <g fill="#F3E6D3" opacity="0.6">
+        <ellipse cx="180" cy="38" rx="55" ry="16"/>
+        <ellipse cx="220" cy="32" rx="38" ry="13"/>
+        <ellipse cx="880" cy="28" rx="60" ry="17"/>
+        <ellipse cx="925" cy="24" rx="38" ry="12"/>
+        <ellipse cx="1320" cy="42" rx="48" ry="14"/>
+      </g>
+
+      <!-- Birds flocking in V-formation -->
+      <g stroke="#3A2A1D" stroke-width="1.4" fill="none" opacity="0.55">
+        <path d="M340,52 Q346,45 352,52"/>
+        <path d="M360,45 Q365,39 370,45"/>
+        <path d="M376,53 Q380,48 384,53"/>
+        <path d="M1060,38 Q1066,31 1072,38"/>
+        <path d="M1080,46 Q1085,40 1090,46"/>
+      </g>
+
+      <!-- Layer 1: Far Misty Background Hills -->
+      <path d="M0,145 Q130,85 290,125 Q420,95 580,122 Q720,80 880,118 Q1020,90 1160,112 Q1310,75 1440,102 L1440,220 L0,220Z" fill="#1F3029" opacity="0.28"/>
+
+      <!-- Layer 2: Midground Hills -->
+      <path d="M0,158 Q160,110 350,145 Q520,112 700,138 Q870,102 1040,132 Q1200,108 1360,138 L1440,128 L1440,220 L0,220Z" fill="#1F3029" opacity="0.48"/>
+
+      <!-- Engineered Wind Turbine (Grounded at X=835, Y=145) -->
+      <g>
+        <!-- Foundation Base Shadow -->
+        <ellipse cx="835" cy="148" rx="8" ry="2.5" fill="#16181B" opacity="0.4"/>
+        <!-- Concrete Base Pad -->
+        <rect x="830" y="145" width="10" height="3" rx="1" fill="#5E4535" stroke="#16181B" stroke-width="0.8"/>
+        
+        <!-- Tapered Metallic White/Craft Tower Column -->
+        <polygon points="831,145 833,88 837,88 839,145" fill="#E8D4B8" stroke="#16181B" stroke-width="1"/>
+        <!-- Structural Ring Lines on Tower -->
+        <line x1="832" y1="102" x2="838" y2="102" stroke="#16181B" stroke-width="0.7" opacity="0.6"/>
+        <line x1="831.5" y1="120" x2="838.5" y2="120" stroke="#16181B" stroke-width="0.7" opacity="0.6"/>
+        <line x1="831" y1="135" x2="839" y2="135" stroke="#16181B" stroke-width="0.7" opacity="0.6"/>
+        
+        <!-- Generator Nacelle Box -->
+        <rect x="828" y="83" width="14" height="10" rx="3" fill="#D49A38" stroke="#16181B" stroke-width="1.2"/>
+        <!-- Red Aviation Beacon Safety Light -->
+        <circle cx="835" cy="81" r="1.8" fill="#C8382A" stroke="#16181B" stroke-width="0.6"/>
+        
+        <!-- 3 Aerodynamic Airfoil Blades (Centered at X=835, Y=88) -->
+        <g class="windmill-blade-group">
+          <!-- Blade 1 (Up-Left) -->
+          <path d="M835,88 Q818,65 808,55 Q812,68 835,88 Z" fill="#F3E6D3" stroke="#16181B" stroke-width="1"/>
+          <!-- Blade 2 (Up-Right) -->
+          <path d="M835,88 Q852,65 862,55 Q858,68 835,88 Z" fill="#F3E6D3" stroke="#16181B" stroke-width="1"/>
+          <!-- Blade 3 (Down) -->
+          <path d="M835,88 Q838,112 835,122 Q831,112 835,88 Z" fill="#F3E6D3" stroke="#16181B" stroke-width="1"/>
+        </g>
+        
+        <!-- Rotor Hub Nose Cone -->
+        <circle cx="835" cy="88" r="4" fill="#C8382A" stroke="#16181B" stroke-width="1"/>
+        <circle cx="835" cy="88" r="1.5" fill="#FFF2A8"/>
+      </g>
+
+      <!-- Multi-tiered Conifer (Pine) Tree Clusters on Mid Hills -->
+      <!-- Left Cluster (X=90 - 130) -->
+      <g fill="#1F3029" stroke="#16181B" stroke-width="0.8">
+        <!-- Tree 1 -->
+        <rect x="100" y="142" width="4" height="10" fill="#3A2A1D"/>
+        <polygon points="90,144 102,122 114,144"/>
+        <polygon points="93,132 102,112 111,132"/>
+        <polygon points="96,120 102,104 108,120"/>
+        
+        <!-- Tree 2 -->
+        <rect x="118" y="140" width="3" height="8" fill="#3A2A1D"/>
+        <polygon points="110,142 119,124 128,142"/>
+        <polygon points="113,130 119,115 125,130"/>
+      </g>
+
+      <!-- Center Cluster (X=660 - 710) -->
+      <g fill="#1F3029" stroke="#16181B" stroke-width="0.8">
+        <rect x="684" y="135" width="4" height="10" fill="#3A2A1D"/>
+        <polygon points="674,137 686,115 698,137"/>
+        <polygon points="677,125 686,105 695,125"/>
+        <polygon points="680,113 686,95 692,113"/>
+      </g>
+
+      <!-- Right Cluster (X=1130 - 1170) -->
+      <g fill="#1F3029" stroke="#16181B" stroke-width="0.8">
+        <rect x="1148" y="132" width="4" height="9" fill="#3A2A1D"/>
+        <polygon points="1138,134 1150,112 1162,134"/>
+        <polygon points="1141,122 1150,102 1159,122"/>
+      </g>
+
+      <!-- Layer 3: Foreground Slope & Ground Contour -->
+      <path d="M0,168 Q220,146 480,165 Q680,148 890,162 Q1080,144 1280,158 Q1390,152 1440,156 L1440,220 L0,220Z" fill="#3A2A1D" opacity="0.75"/>
+
+      <!-- GROUNDED VILLAGE COTTAGE 1 (Left - X=250) -->
+      <g>
+        <!-- Ground Base Shadow & Shrubs -->
+        <ellipse cx="270" cy="162" rx="26" ry="5" fill="#16181B" opacity="0.3"/>
+        <circle cx="244" cy="158" r="6" fill="#1F3029" stroke="#16181B" stroke-width="0.8"/>
+        <circle cx="294" cy="159" r="5" fill="#1F3029" stroke="#16181B" stroke-width="0.8"/>
+
+        <!-- Main Cottage Structure -->
+        <rect x="248" y="134" width="38" height="26" fill="#5E4535" stroke="#16181B" stroke-width="1.2"/>
+        <!-- Side Porch Extension -->
+        <rect x="286" y="142" width="16" height="18" fill="#4A3629" stroke="#16181B" stroke-width="1"/>
+        <polygon points="284,142 294,134 304,142" fill="#C8382A" stroke="#16181B" stroke-width="1"/>
+
+        <!-- Terracotta Roof Shingles with Overhang -->
+        <polygon points="242,134 267,114 292,134" fill="#C8382A" stroke="#16181B" stroke-width="1.5"/>
+        <line x1="246" y1="134" x2="288" y2="134" stroke="#16181B" stroke-width="1"/>
+
+        <!-- Brick Chimney + Smoke -->
+        <rect x="278" y="118" width="5" height="12" fill="#8C3B2F" stroke="#16181B" stroke-width="1"/>
+        <circle cx="280" cy="112" r="3" fill="#E8D4B8" opacity="0.4"/>
+        <circle cx="282" cy="106" r="4" fill="#E8D4B8" opacity="0.25"/>
+
+        <!-- Illuminated Multi-Pane Windows & Door -->
+        <rect x="254" y="142" width="8" height="9" fill="#FFF2A8" rx="1" stroke="#16181B" stroke-width="0.8"/>
+        <line x1="258" y1="142" x2="258" y2="151" stroke="#16181B" stroke-width="0.6"/>
+        <line x1="254" y1="146" x2="262" y2="146" stroke="#16181B" stroke-width="0.6"/>
+        
+        <rect x="268" y="142" width="8" height="9" fill="#FFF2A8" rx="1" stroke="#16181B" stroke-width="0.8"/>
+        <line x1="272" y1="142" x2="272" y2="151" stroke="#16181B" stroke-width="0.6"/>
+
+        <rect x="289" y="148" width="6" height="12" fill="#3D2E23" stroke="#16181B" stroke-width="0.8"/>
+        
+        <!-- Wooden Fence at Cottage Base -->
+        <line x1="230" y1="160" x2="230" y2="152" stroke="#5E4535" stroke-width="1.8"/>
+        <line x1="238" y1="160" x2="238" y2="152" stroke="#5E4535" stroke-width="1.8"/>
+        <line x1="228" y1="154" x2="240" y2="154" stroke="#5E4535" stroke-width="1.2"/>
+      </g>
+
+      <!-- GROUNDED VILLAGE COTTAGE 2 (Right - X=1230) -->
+      <g>
+        <!-- Ground Base Shadow & Fence -->
+        <ellipse cx="1255" cy="158" rx="28" ry="5" fill="#16181B" opacity="0.3"/>
+        <circle cx="1224" cy="155" r="5" fill="#1F3029" stroke="#16181B" stroke-width="0.8"/>
+
+        <!-- Cottage Body -->
+        <rect x="1232" y="128" width="40" height="28" fill="#5E4535" stroke="#16181B" stroke-width="1.2"/>
+        
+        <!-- Slanted Clay Roof -->
+        <polygon points="1226,128 1252,106 1278,128" fill="#C8382A" stroke="#16181B" stroke-width="1.5"/>
+        
+        <!-- Windows & Entrance Porch -->
+        <rect x="1240" y="136" width="9" height="10" fill="#FFF2A8" rx="1" stroke="#16181B" stroke-width="0.8"/>
+        <rect x="1256" y="136" width="9" height="10" fill="#FFF2A8" rx="1" stroke="#16181B" stroke-width="0.8"/>
+        <rect x="1249" y="146" width="7" height="10" fill="#3D2E23" stroke="#16181B" stroke-width="0.8"/>
+      </g>
+
+      <!-- Curved Goose-Neck Highway Lamp Post (Left - X=500) -->
+      <g>
+        <!-- Smooth Light Cone onto Road -->
+        <polygon points="506,134 545,178 470,178" fill="url(#lampGlowGrad)"/>
+        <!-- Steel Pole -->
+        <path d="M500,174 L500,138 Q500,130 508,130 L512,130" fill="none" stroke="#16181B" stroke-width="2"/>
+        <!-- Lantern Fixture & Bulb -->
+        <ellipse cx="512" cy="132" rx="4" ry="2" fill="#D49A38" stroke="#16181B" stroke-width="0.8"/>
+        <circle cx="512" cy="133" r="2.5" fill="#FFF2A8"/>
+      </g>
+
+      <!-- Curved Goose-Neck Highway Lamp Post (Right - X=1100) -->
+      <g>
+        <polygon points="1106,131 1145,175 1070,175" fill="url(#lampGlowGrad)"/>
+        <path d="M1100,170 L1100,134 Q1100,127 1108,127 L1112,127" fill="none" stroke="#16181B" stroke-width="2"/>
+        <ellipse cx="1112" cy="129" rx="4" ry="2" fill="#D49A38" stroke="#16181B" stroke-width="0.8"/>
+        <circle cx="1112" cy="130" r="2.5" fill="#FFF2A8"/>
+      </g>
+
+      <!-- Highway Milestone Stone (X=140) -->
+      <g>
+        <path d="M140,178 L140,166 Q140,160 146,160 Q152,160 152,166 L152,178 Z" fill="#F3E6D3" stroke="#16181B" stroke-width="1.2"/>
+        <path d="M140,166 Q140,160 146,160 Q152,160 152,166 Z" fill="#C8382A"/>
+        <line x1="143" y1="172" x2="149" y2="172" stroke="#16181B" stroke-width="0.8"/>
+      </g>
+
+      <!-- Asphalt Road Surface -->
+      <path d="M0,178 Q360,170 720,178 T1440,172 L1440,220 L0,220Z" fill="#5E4535"/>
+      <path d="M0,190 L1440,190 L1440,220 L0,220Z" fill="#3A2A1D"/>
+
+      <!-- Road Shoulder Lines -->
+      <line x1="0" y1="180" x2="1440" y2="180" stroke="#C4B29E" stroke-width="1" opacity="0.35"/>
+      <line x1="0" y1="188" x2="1440" y2="188" stroke="#C4B29E" stroke-width="1" opacity="0.35"/>
+
+      <!-- Dashed Yellow Center Divider -->
+      <line x1="0" y1="184" x2="1440" y2="184" stroke="#E2B52B" stroke-width="2.2" stroke-dasharray="24,16" opacity="0.75"/>
+
+      <!-- DYNAMICALLY ANIMATED DRIVING SANGITAM BUS GROUP -->
+      <g class="animated-bus-group">
+        <g class="bus-chassis">
+          
+          <!-- Headlight Glowing Cone -->
+          <polygon points="665,174 745,158 745,198" fill="url(#headlightBeam)"/>
+
+          <!-- Bus Body (Sangitam Crimson) -->
+          <rect x="580" y="162" width="86" height="26" rx="5" fill="#C8382A" stroke="#16181B" stroke-width="1.5"/>
+          
+          <!-- Roof Air Conditioner Pod -->
+          <rect x="600" y="158" width="45" height="4" rx="2" fill="#A52B1F" stroke="#16181B" stroke-width="1"/>
+          
+          <!-- Sleeper Windows -->
+          <rect x="588" y="167" width="10" height="10" rx="2" fill="#F3E6D3" opacity="0.9" stroke="#16181B" stroke-width="0.8"/>
+          <rect x="602" y="167" width="10" height="10" rx="2" fill="#F3E6D3" opacity="0.85" stroke="#16181B" stroke-width="0.8"/>
+          <rect x="616" y="167" width="10" height="10" rx="2" fill="#F3E6D3" opacity="0.9" stroke="#16181B" stroke-width="0.8"/>
+          <rect x="630" y="167" width="10" height="10" rx="2" fill="#F3E6D3" opacity="0.85" stroke="#16181B" stroke-width="0.8"/>
+          
+          <!-- Driver Front Windshield -->
+          <path d="M645,165 L662,165 Q666,165 666,169 L666,178 L645,178 Z" fill="#F3E6D3" opacity="0.92" stroke="#16181B" stroke-width="1"/>
+          
+          <!-- Gold Sangitam Branding Stripe -->
+          <rect x="588" y="180" width="52" height="3.5" rx="1" fill="#E2B52B"/>
+          
+          <!-- Headlight Lamp -->
+          <circle cx="663" cy="179" r="2.5" fill="#FFF2A8"/>
+
+          <!-- Animated Exhaust Smoke Particles -->
+          <circle class="smoke-particle" cx="576" cy="180" r="4" fill="#E8D4B8"/>
+          <circle class="smoke-particle-2" cx="572" cy="177" r="3" fill="#E8D4B8"/>
+          <circle class="smoke-particle-3" cx="568" cy="174" r="2.5" fill="#E8D4B8"/>
+
+          <!-- Front & Rear Wheels -->
+          <g transform="translate(600, 190)">
+            <circle cx="0" cy="0" r="6.5" fill="#16181B"/>
+            <circle cx="0" cy="0" r="3" fill="#D49A38"/>
+            <line class="wheel-spin" x1="-3" y1="0" x2="3" y2="0" stroke="#16181B" stroke-width="1"/>
+          </g>
+
+          <g transform="translate(650, 190)">
+            <circle cx="0" cy="0" r="6.5" fill="#16181B"/>
+            <circle cx="0" cy="0" r="3" fill="#D49A38"/>
+            <line class="wheel-spin" x1="-3" y1="0" x2="3" y2="0" stroke="#16181B" stroke-width="1"/>
+          </g>
+
+        </g>
+      </g>
+    </svg>
+
+    <!-- Thin earth-ground stripe -->
+    <div class="footer-earth"></div>
+
+    <!-- Floating heritage seal badge -->
+    <a href="about.html" class="footer-seal">
+      <span style="font-size:0.75rem; font-weight:900; line-height:1.1; letter-spacing:0.04em;">SANGITAM</span>
+      <span style="font-size:0.62rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; margin: 1px 0;">TRAVELS</span>
+      <span style="font-size:0.55rem; font-weight:700; opacity:0.85;">ESTD 1983</span>
+    </a>
+
+    <!-- Teal content band -->
+    <footer class="footer-body">
+      <div class="container">
+        <div class="footer-body-grid">
+
+          <!-- Col 1: Brand -->
+          <div>
+            <h3>SANGITAM TRAVELS</h3>
+            <p>Maharashtra's iconic AC Sleeper bus operator & express parcel cargo network since 1983. Connecting Jalgaon, Pune, Mumbai, Nashik & Dhule — 40+ years of trusted road transport.</p>
+          </div>
+
+          <!-- Col 2: Important Links -->
+          <div>
+            <h4>Important Links</h4>
+            <ul class="footer-scene-links">
+              <li><a href="index.html"><span class="link-arrow">›</span> Home</a></li>
+              <li><a href="about.html"><span class="link-arrow">›</span> About & History</a></li>
+              <li><a href="services.html"><span class="link-arrow">›</span> Services & Cargo</a></li>
+              <li><a href="routes.html"><span class="link-arrow">›</span> Routes & Timetable</a></li>
+              <li><a href="contact.html"><span class="link-arrow">›</span> Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Office Hours & Contact -->
+          <div class="footer-contact-block">
+            <h4>Office Hours & Contact</h4>
+            <p>
+              <span class="label"><i class="fas fa-clock"></i> Working Hours</span>
+              <strong>Monday to Saturday — 10:00 AM to 9:30 PM</strong><br>
+              Sundays & Public Holidays — Closed
+            </p>
+            <p>
+              <span class="label"><i class="fas fa-envelope"></i> Email</span>
+              <strong>contact@sangitamtravels.com</strong><br>
+              <strong>cargo@sangitamtravels.com</strong>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Copyright strip -->
+      <div class="footer-copyright">
+        © 2026 Sangitam Travels. All Rights Reserved. | Design & Development: Sangitam Digital Team
+      </div>
+    </footer>
+  </div>
+
+  <!-- Fixed scroll-to-top button -->
+  <button class="scene-scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
 </body>
 </html>
